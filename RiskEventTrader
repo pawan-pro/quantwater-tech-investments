@@ -1,0 +1,368 @@
+//+------------------------------------------------------------------+
+//|                                               RiskEventTrader.mq5|
+//|                       Copyright 2024, Quantwater Tech Investments|
+//|                                       https://www.quantwater.tech|
+//+------------------------------------------------------------------+
+
+#property copyright "Copyright 2024, Quantwater Tech Investments"
+#property link      "https://www.quantwater.tech"
+#property version   "1.23"
+#property strict
+#property description "Stop loss info will be displayed on the chart after initialization"
+
+#include <Trade\Trade.mqh>
+#include <Indicators\Indicator.mqh>
+
+// Input parameters
+input string   NewsDate = "2024.09.17";  // Date of the news event (YYYY.MM.DD)
+input string   NewsTime = "15:30:00";    // Time of the news event (HH:MM:SS)
+input string   TimeBeforeNews = "00:00:02:000";  // Time to place trade before news (HH:MM:SS:mmm)
+input double   ATRFactor = 1.5;  // ATR factor for volatility unit calculation
+input double   VolatilityUnitMultiple = 1.0;  // Volatility unit multiple for stop loss calculation
+input double   RiskRewardRatio = 2.0;  // Risk-Reward ratio
+input ENUM_ORDER_TYPE OrderType = ORDER_TYPE_BUY;  // Order type: ORDER_TYPE_BUY or ORDER_TYPE_SELL
+input double   Lots = 0.1;  // Initial trading volume
+input int      MaxTrades = 3;  // Maximum number of trades in the pyramid
+input bool     UseTrailingStop = true;  // Use trailing stop instead of pyramid logic
+input double   TrailingStopATRFactor = 1.0;  // ATR factor for trailing stop calculation
+input string   UniqueChartID = "";  // Unique identifier for this chart instance
+
+// Global variables
+datetime newsDateTime;
+long timeBeforeNewsMS;
+bool initialTradeOpened = false;
+CTrade trade;
+int atrHandle;
+double fixedATRValue = 0;
+ulong tradeTickets[];  // Array to store trade tickets opened by this EA
+bool trailingStopActivated = false;
+
+//+------------------------------------------------------------------+
+//| Expert initialization function                                   |
+//+------------------------------------------------------------------+
+int OnInit()
+{
+    // Combine and convert news date and time to datetime
+    newsDateTime = StringToTime(NewsDate + " " + NewsTime);
+    if(newsDateTime == 0)
+    {
+        Print("Error: Invalid NewsDate or NewsTime format. Please use YYYY.MM.DD for date and HH:MM:SS for time");
+        return INIT_PARAMETERS_INCORRECT;
+    }
+    
+    // Convert TimeBeforeNews to milliseconds
+    timeBeforeNewsMS = TimeToMilliseconds(TimeBeforeNews);
+    if(timeBeforeNewsMS < 0)
+    {
+        Print("Error: Invalid TimeBeforeNews format. Please use HH:MM:SS:mmm");
+        return INIT_PARAMETERS_INCORRECT;
+    }
+    
+    // Check if the news time is in the future
+    if(newsDateTime <= TimeCurrent())
+    {
+        Print("Error: News event time must be in the future");
+        return INIT_PARAMETERS_INCORRECT;
+    }
+    
+    // Initialize ATR indicator
+    atrHandle = iATR(_Symbol, PERIOD_CURRENT, 14);
+    if(atrHandle == INVALID_HANDLE)
+    {
+        Print("Error initializing ATR indicator");
+        return INIT_FAILED;
+    }
+    
+    // Check for existing trades and initialize tradeTickets array
+    if(!LoadExistingTrades())
+    {
+        Print("Error loading existing trades");
+        return INIT_FAILED;
+    }
+    
+    // Calculate and display risk information
+    CalculateAndDisplayRisk();
+    
+    Print("News event scheduled for: ", TimeToString(newsDateTime, TIME_DATE|TIME_MINUTES|TIME_SECONDS));
+    Print("Trade will be placed ", TimeBeforeNews, " before the news event");
+    Print("Chart Instance: ", (UniqueChartID == "") ? "Default" : UniqueChartID);
+    
+    return(INIT_SUCCEEDED);
+}
+
+//+------------------------------------------------------------------+
+//| Expert deinitialization function                                 |
+//+------------------------------------------------------------------+
+void OnDeinit(const int reason)
+{
+    if(atrHandle != INVALID_HANDLE)
+        IndicatorRelease(atrHandle);
+}
+
+//+------------------------------------------------------------------+
+//| Expert tick function                                             |
+//+------------------------------------------------------------------+
+void OnTick()
+{
+    datetime currentTime = TimeCurrent();
+    long currentTimeMS = (long)currentTime * 1000 + GetTickCount() % 1000;
+    long newsTimeMS = (long)newsDateTime * 1000;
+    
+    if(!initialTradeOpened && ArraySize(tradeTickets) == 0 && currentTimeMS >= newsTimeMS - timeBeforeNewsMS && currentTime < newsDateTime)
+    {
+        if(GetATRValue(fixedATRValue))  // Store ATR value before news
+        {
+            OpenTrade();
+            initialTradeOpened = true;
+        }
+    }
+    
+    if(ArraySize(tradeTickets) > 0)
+    {
+        ManageOpenPositions();
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Function to load existing trades                                 |
+//+------------------------------------------------------------------+
+bool LoadExistingTrades()
+{
+    ArrayFree(tradeTickets);
+    
+    for(int i = 0; i < PositionsTotal(); i++)
+    {
+        ulong ticket = PositionGetTicket(i);
+        if(ticket <= 0)
+            continue;
+            
+        if(PositionSelectByTicket(ticket))
+        {
+            string positionSymbol = PositionGetString(POSITION_SYMBOL);
+            string positionComment = PositionGetString(POSITION_COMMENT);
+            
+            if(positionSymbol == _Symbol && StringFind(positionComment, UniqueChartID) >= 0)
+            {
+                ArrayResize(tradeTickets, ArraySize(tradeTickets) + 1);
+                tradeTickets[ArraySize(tradeTickets) - 1] = ticket;
+                initialTradeOpened = true;
+                
+                // Check if trailing stop should be activated
+                double positionTakeProfit = PositionGetDouble(POSITION_TP);
+                double currentPrice = (OrderType == ORDER_TYPE_BUY) ? SymbolInfoDouble(_Symbol, SYMBOL_BID) : SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+                
+                if((OrderType == ORDER_TYPE_BUY && currentPrice >= positionTakeProfit) ||
+                   (OrderType == ORDER_TYPE_SELL && currentPrice <= positionTakeProfit))
+                {
+                    trailingStopActivated = true;
+                }
+            }
+        }
+    }
+    
+    Print("Loaded ", ArraySize(tradeTickets), " existing trades for this EA instance");
+    return true;
+}
+
+//+------------------------------------------------------------------+
+//| Function to calculate and display risk information               |
+//+------------------------------------------------------------------+
+void CalculateAndDisplayRisk()
+{
+    double atrValue;
+    if(!GetATRValue(atrValue))
+        return;
+    
+    double spread = SymbolInfoDouble(_Symbol, SYMBOL_ASK) - SymbolInfoDouble(_Symbol, SYMBOL_BID);
+    double volatilityUnit = atrValue * ATRFactor + spread;
+    double stopLossDistance = volatilityUnit * VolatilityUnitMultiple;
+    
+    double tickSize = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_SIZE);
+    double tickValue = SymbolInfoDouble(_Symbol, SYMBOL_TRADE_TICK_VALUE);
+    double pointValue = tickValue / tickSize;
+    
+    double standardLotSize = 0.1;  // We're calculating for 0.1 lot as requested
+    
+    double stopLossCurrency = stopLossDistance * pointValue * standardLotSize;
+    
+    double accountBalance = AccountInfoDouble(ACCOUNT_BALANCE);
+    double stopLossPercent = (stopLossCurrency / accountBalance) * 100;
+    
+    string stopLossInfo = StringFormat("Stop loss is %s %.2f & %.2f%% of account balance, based on the ATR value just before opening of this window, and position size of 0.1",
+                                       AccountInfoString(ACCOUNT_CURRENCY),
+                                       stopLossCurrency,
+                                       stopLossPercent);
+    
+    // Update EA description with stop loss info
+    if(!MQLInfoInteger(MQL_TESTER))  // Don't change description in Strategy Tester
+    {
+        if(!TerminalInfoInteger(TERMINAL_TRADE_ALLOWED))
+        {
+            MessageBox(stopLossInfo, "Stop Loss Information", MB_ICONINFORMATION);
+        }
+        else
+        {
+            Comment(stopLossInfo);
+        }
+    }
+    else
+    {
+        Print(stopLossInfo);
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Function to open a trade                                         |
+//+------------------------------------------------------------------+
+void OpenTrade()
+{
+    double entryPrice = (OrderType == ORDER_TYPE_BUY) ? SymbolInfoDouble(_Symbol, SYMBOL_ASK) : SymbolInfoDouble(_Symbol, SYMBOL_BID);
+    
+    double spread = SymbolInfoDouble(_Symbol, SYMBOL_ASK) - SymbolInfoDouble(_Symbol, SYMBOL_BID);
+    double volatilityUnit = fixedATRValue * ATRFactor + spread;
+    double stopLossDistance = volatilityUnit * VolatilityUnitMultiple;
+    double takeProfitDistance = stopLossDistance * RiskRewardRatio;
+    
+    double stopLoss, takeProfit;
+    if(OrderType == ORDER_TYPE_BUY)
+    {
+        stopLoss = entryPrice - stopLossDistance;
+        takeProfit = entryPrice + takeProfitDistance;
+    }
+    else // ORDER_TYPE_SELL
+    {
+        stopLoss = entryPrice + stopLossDistance;
+        takeProfit = entryPrice - takeProfitDistance;
+    }
+    
+    // Calculate lot size for subsequent trades
+    double currentLots = Lots * MathPow(0.8, ArraySize(tradeTickets));  // Reduce lot size by 20% for each new trade
+    
+    // Open the trade
+    if(!trade.PositionOpen(_Symbol, OrderType, currentLots, entryPrice, stopLoss, takeProfit, "News Trade " + IntegerToString(ArraySize(tradeTickets) + 1) + " " + UniqueChartID))
+    {
+        Print("Error opening trade. Error code: ", GetLastError());
+        Print("Entry: ", entryPrice, " SL: ", stopLoss, " TP: ", takeProfit);
+        return;
+    }
+    
+    // Store the ticket of the newly opened trade
+    ulong ticket = trade.ResultOrder();
+    ArrayResize(tradeTickets, ArraySize(tradeTickets) + 1);
+    tradeTickets[ArraySize(tradeTickets) - 1] = ticket;
+    
+    Print("Trade opened successfully. Ticket: ", ticket);
+}
+
+//+------------------------------------------------------------------+
+//| Function to manage open positions                                |
+//+------------------------------------------------------------------+
+void ManageOpenPositions()
+{
+    double currentATR;
+    if (!GetATRValue(currentATR))
+        return;
+
+    bool newTradeOpened = false;
+
+    for(int i = 0; i < ArraySize(tradeTickets); i++)
+    {
+        if(PositionSelectByTicket(tradeTickets[i]))
+        {
+            double positionProfit = PositionGetDouble(POSITION_PROFIT);
+            double positionOpenPrice = PositionGetDouble(POSITION_PRICE_OPEN);
+            double positionTakeProfit = PositionGetDouble(POSITION_TP);
+            double currentPrice = (OrderType == ORDER_TYPE_BUY) ? SymbolInfoDouble(_Symbol, SYMBOL_BID) : SymbolInfoDouble(_Symbol, SYMBOL_ASK);
+            
+            if(UseTrailingStop)
+            {
+                // Check if take profit has been hit
+                if((OrderType == ORDER_TYPE_BUY && currentPrice >= positionTakeProfit) ||
+                   (OrderType == ORDER_TYPE_SELL && currentPrice <= positionTakeProfit))
+                {
+                    trailingStopActivated = true;
+                }
+
+                if(trailingStopActivated)
+                {
+                    // Apply trailing stop
+                    double trailingStopDistance = currentATR * TrailingStopATRFactor;
+                    double newStopLoss;
+                    if(OrderType == ORDER_TYPE_BUY)
+                    {
+                        newStopLoss = currentPrice - trailingStopDistance;
+                        if(newStopLoss > PositionGetDouble(POSITION_SL) && newStopLoss < currentPrice)
+                        {
+                            trade.PositionModify(tradeTickets[i], newStopLoss, 0); // Remove take profit
+                        }
+                    }
+                    else // ORDER_TYPE_SELL
+                    {
+                        newStopLoss = currentPrice + trailingStopDistance;
+                        if(newStopLoss < PositionGetDouble(POSITION_SL) && newStopLoss > currentPrice)
+                        {
+                            trade.PositionModify(tradeTickets[i], newStopLoss, 0); // Remove take profit
+                        }
+                    }
+                }
+            }
+            else // Pyramid trading logic
+            {
+                // Check if it's time to open a new trade in the pyramid
+                if(ArraySize(tradeTickets) < MaxTrades && !newTradeOpened)
+                {
+                    if((OrderType == ORDER_TYPE_BUY && currentPrice >= positionTakeProfit) ||
+                       (OrderType == ORDER_TYPE_SELL && currentPrice <= positionTakeProfit))
+                    {
+                        OpenTrade();
+                        newTradeOpened = true;
+                        
+                        // Move the stop loss of all previous trades to breakeven
+                        for(int j = 0; j < i + 1; j++)
+                        {
+                            if(PositionSelectByTicket(tradeTickets[j]))
+                            {
+                                double prevOpenPrice = PositionGetDouble(POSITION_PRICE_OPEN);
+                                trade.PositionModify(tradeTickets[j], prevOpenPrice, PositionGetDouble(POSITION_TP));
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//+------------------------------------------------------------------+
+//| Function to get current ATR value                                |
+//+------------------------------------------------------------------+
+bool GetATRValue(double &atrValue)
+{
+    double atrBuffer[];
+    if(CopyBuffer(atrHandle, 0, 0, 1, atrBuffer) != 1)
+    {
+        Print("Error copying ATR buffer. Error code: ", GetLastError());
+        return false;
+    }
+    
+    atrValue = atrBuffer[0];
+    return true;
+}
+
+//+------------------------------------------------------------------+
+//| Function to convert time string to milliseconds                  |
+//+------------------------------------------------------------------+
+
+long TimeToMilliseconds(string timeStr)
+{
+    string parts[];
+    if(StringSplit(timeStr, ':', parts) != 4)
+        return -1;
+    
+    int hours = (int)StringToInteger(parts[0]);
+    int minutes = (int)StringToInteger(parts[1]);
+    int seconds = (int)StringToInteger(parts[2]);
+    int milliseconds = (int)StringToInteger(parts[3]);
+    
+    return (hours * 3600 + minutes * 60 + seconds) * 1000 + milliseconds;
+}
