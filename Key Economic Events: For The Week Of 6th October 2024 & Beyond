@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../ec.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table, th, td {
+    border: 1px solid #828282;
+  }
+  th, td {
+    padding: 5px;
+    text-align: left;
+    font-size: 12px;
+  }
+  .date-col { width: 70px; }
+  .day-col { width: 40px; }
+  .time-col { width: 60px; }
+  .cur-col { width: 40px; }
+  .imp-col { width: 40px; }
+  .event-col { width: 200px; }
+  .actual-col, .forecast-col, .previous-col { width: 60px; }
+  .notes-col { width: 300px; }
+</style>
+</head>
+
+<body link="#467886" vlink="#96607D">
+
+<table>
+<tr>
+  <th class="date-col">Date</th>
+  <th class="day-col">Day</th>
+  <th class="time-col">Time (IST)</th>
+  <th class="cur-col">Cur.</th>
+  <th class="imp-col">Imp.</th>
+  <th class="event-col">Event</th>
+  <th class="actual-col">Actual</th>
+  <th class="forecast-col">Forecast</th>
+  <th class="previous-col">Previous</th>
+  <th class="notes-col">Notes</th>
+</tr>
+
+<tr>
+  <td>09-Oct-24</td>
+  <td>Wed</td>
+  <td>6:30</td>
+  <td>NZD</td>
+  <td>3</td>
+  <td>RBNZ Interest Rate Decision</td>
+  <td></td>
+  <td>4.75%</td>
+  <td>5.25%</td>
+  <td>The Reserve Bank of New Zealand (RBNZ) governor decides where to set the rate. A reading stronger than forecast is generally supportive for the NZD.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">AUDNZD</a> | <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USDNZD</a></td>
+</tr>
+
+<tr>
+  <td>09-Oct-24</td>
+  <td>Wed</td>
+  <td>20:00</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>Crude Oil Inventories</td>
+  <td></td>
+  <td></td>
+  <td>3.889M</td>
+  <td>Measures weekly change in commercial crude oil barrels. Higher inventories imply weaker demand, bearish for crude prices.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USOILX4</a></td>
+</tr>
+
+<tr>
+  <td>09-Oct-24</td>
+  <td>Wed</td>
+  <td>22:30</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>10-Year Auction Note</td>
+  <td></td>
+  <td></td>
+  <td>3.648%</td>
+  <td>Represents yield on auctioned Treasury Note. Indicator of government debt situation.</td>
+</tr>
+
+<tr>
+  <td>09-Oct-24</td>
+  <td>Wed</td>
+  <td>23:30</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>FOMC Meeting Minutes</td>
+  <td></td>
+  <td></td>
+  <td></td>
+  <td>Detailed record of FOMC policy-setting meeting. Offers insights on monetary policy stance.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USDJPY</a></td>
+</tr>
+
+<tr>
+  <td>10-Oct-24</td>
+  <td>Thu</td>
+  <td>18:00</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>Core CPI (MoM) (Sep)</td>
+  <td></td>
+  <td>0.20%</td>
+  <td>0.30%</td>
+  <td>Measures price changes excluding food and energy. Key indicator for Fed's price stability mandate.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USDJPY</a></td>
+</tr>
+
+<tr>
+  <td>10-Oct-24</td>
+  <td>Thu</td>
+  <td>18:00</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>CPI (YoY) (Sep)</td>
+  <td></td>
+  <td>2.30%</td>
+  <td>2.50%</td>
+  <td>Measures change in consumer goods and services prices. Key for central bank's price stability role.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USDJPY</a></td>
+</tr>
+
+<tr>
+  <td>10-Oct-24</td>
+  <td>Thu</td>
+  <td>18:00</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>CPI (MoM) (Sep)</td>
+  <td></td>
+  <td>0.10%</td>
+  <td>0.20%</td>
+  <td>Measures monthly change in consumer prices. Important for Fed's inflation monitoring.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USDJPY</a></td>
+</tr>
+
+<tr>
+  <td>10-Oct-24</td>
+  <td>Thu</td>
+  <td>18:00</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>Initial Jobless Claims</td>
+  <td></td>
+  <td></td>
+  <td>225K</td>
+  <td>Measures first-time unemployment insurance claims. Timely economic indicator.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USDJPY</a></td>
+</tr>
+
+<tr>
+  <td>10-Oct-24</td>
+  <td>Thu</td>
+  <td>22:30</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>30-Year Bond Auction</td>
+  <td></td>
+  <td></td>
+  <td>4.015%</td>
+  <td>Represents yield on auctioned Treasury Bond. Indicator of long-term government debt situation.</td>
+</tr>
+
+<tr>
+  <td>11-Oct-24</td>
+  <td>Fri</td>
+  <td>11:30</td>
+  <td>GBP</td>
+  <td>3</td>
+  <td>GDP (MoM) (Aug)</td>
+  <td></td>
+  <td></td>
+  <td>0.000%</td>
+  <td>Measures monthly change in economic output. Key indicator of economic health.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">GBPUSD</a></td>
+</tr>
+
+<tr>
+  <td>11-Oct-24</td>
+  <td>Fri</td>
+  <td>11:30</td>
+  <td>EUR</td>
+  <td>3</td>
+  <td>German CPI (MoM) (Sep)</td>
+  <td></td>
+  <td>0.000%</td>
+  <td>-0.100%</td>
+  <td>Measures change in German consumer prices. Important for ECB's price stability mandate.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">EURUSD</a> | <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">EURJPY</a></td>
+</tr>
+
+<tr>
+  <td>11-Oct-24</td>
+  <td>Fri</td>
+  <td>18:00</td>
+  <td>USD</td>
+  <td>3</td>
+  <td>PPI (MoM) (Sep)</td>
+  <td></td>
+  <td>0.100%</td>
+  <td>0.200%</td>
+  <td>Measures change in input prices. Affects consumer prices and monitored by central banks.<br><br>Historical impact: <a href="https://drive.google.com/file/d/1bytYhs1U7sl9T-bq-ZLptF1L_UrbIs9c/view?usp=share_link" target="_blank">USDJPY</a></td>
+</tr>
+
+</table>
+<p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 5th October 2024, 8PM.</p>
+<p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="font-weight: normal; text-decoration: none;">https://quantwater.tech/resources</a></p>
+</body>
+</html>
