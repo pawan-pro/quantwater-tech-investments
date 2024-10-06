@@ -1,0 +1,417 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../ec.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 50px solid rgb(250, 250, 250);
+    }
+    th, td {
+      padding: 50px;
+      text-align: left;
+    }
+</style>
+</head>
+
+<body link="#467886" vlink="#96607D">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1237 style='border-collapse:collapse;table-layout:fixed;width:965pt'>
+<col width=99 style='mso-width-source:userset;mso-width-alt:3157;width:74pt'>
+<col width=63 style='mso-width-source:userset;mso-width-alt:2005;width:47pt'>
+<col width=112 style='mso-width-source:userset;mso-width-alt:3584;width:84pt'>
+<col width=49 style='mso-width-source:userset;mso-width-alt:1578;width:37pt'>
+<col width=55 style='mso-width-source:userset;mso-width-alt:1749;width:41pt'>
+<col width=300 style='mso-width-source:userset;mso-width-alt:11306;width:265pt'>
+<col width=68 style='mso-width-source:userset;mso-width-alt:2176;width:51pt'>
+<col class=xl73 width=88 style='mso-width-source:userset;mso-width-alt:2816;width:66pt'>
+<col class=xl73 width=91 style='mso-width-source:userset;mso-width-alt:2901;width:68pt'>
+<col class=xl66 width=300 style='mso-width-source:userset;mso-width-alt:8648;width:350pt'>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl65 width=99 style='height:16.0pt;width:74pt; padding-left: 10px;'>Date</td>
+  <td class=xl65 width=63 style='border-left:none;width:47pt; padding-left: 10px;'>Day</td>
+  <td class=xl65 width=112 style='border-left:none;width:84pt; padding-left: 10px;'>Time (IST)</td>
+  <td class=xl65 width=49 style='border-left:none;width:37pt; padding-left: 10px;'>Cur.</td>
+  <td class=xl65 width=55 style='border-left:none;width:41pt; padding-left: 10px;'>Imp.</td>
+  <td class=xl65 width=353 style='border-left:none;width:265pt; padding-left: 10px;'>Event</td>
+  <td class=xl65 width=68 style='border-left:none;width:51pt; padding-left: 10px;'>Actual</td>
+  <td class=xl71 width=88 style='border-left:none;width:66pt; padding-left: 10px;'>Forecast</td>
+  <td class=xl71 width=91 style='border-left:none;width:68pt; padding-left: 10px;'>Previous</td>
+  <td class=xl65 width=300 style='border-left:none;width:350pt; padding-left: 10px;'>Notes</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>10-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Tue </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>German CPI (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-0.10%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.30%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the EUR, while a lower than expected reading should be taken as negative/bearish for the EUR. 
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240910-gc.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | EURAUD</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>10-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Tue </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>16:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>OPEC Monthly Report</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+
+This report delves into the prominent issues impacting the global oil market, offering an in-depth analysis of pivotal developments influencing the trajectory of global oil demand. 
+It also showcases the trends in supply levels and the balance between them for the current and upcoming years. 
+Last week, oil prices tested their lowest levels of the year. 
+This was down to several key factors, inlcuding concerns over declining Chinese demand, an expceted increase in supply following the end of voluntary cuts by OPEC+, 
+and easing geopolitical tensiosn with relative calm in the Middle East. As a result, it fell below the $75 per barrel mark. 
+Any further reduction in the expected demand levels in OPEC's upcoming monthly report could negatively impact Brent cryde prices. 
+<br><br>Historical Impact on Assets: <a href="http://35.222.178.176/20240910-opec.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD | UK Oil Brent</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>6:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>U.S presidential debate between Donald Trump and Kamala Harris</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+Currency movements are influenced by the candidates' policy positions.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240911-pd.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | <a href="http://35.222.178.176/20240911-pd.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>GBP</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>GDP (MoM) (Jul)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.00%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the GBP, while a lower reading should be taken as negative/bearish for the GBP
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240911-gdp.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">GBPUSD</a> | <a href="http://35.222.178.176/20240911-gdp.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURGBP</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core CPI (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+In July, YoY inflation stabilised at 2.9% and Bloomberg expects it to decline to 2.6% in August because of falling global energy prices. 
+Meanwhile, the MoM core inflation is expected to hold steady at 0.2%
+Any higher-than-expected inflation data suggests the Federal Reserve could cut interest rates by just 25 basis points in its upcoming September meeting, 
+providing slight support to the US dollar. 
+On the other hand, lower-than-expected data would increase the likelihood of 50-basis point cut, potentially boosting US stock indices such as the US2000.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240911-cpi.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="http://35.222.178.176/20240911-russ.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">RUSS2000</a> | AUDUSD</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (YoY) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.60%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.90%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+In July, YoY inflation stabilised at 2.9% and Bloomberg expects it to decline to 2.6% in August because of falling global energy prices. 
+Meanwhile, the MoM core inflation is expected to hold steady at 0.2%
+Any higher-than-expected inflation data suggests the Federal Reserve could cut interest rates by just 25 basis points in its upcoming September meeting, 
+providing slight support to the US dollar. 
+On the other hand, lower-than-expected data would increase the likelihood of 50-basis point cut, potentially boosting US stock indices such as the US2000.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240911-cpi.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="http://35.222.178.176/20240911-russ.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">RUSS2000</a> | AUDUSD</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+In July, YoY inflation stabilised at 2.9% and Bloomberg expects it to decline to 2.6% in August because of falling global energy prices. 
+Meanwhile, the MoM core inflation is expected to hold steady at 0.2%
+Any higher-than-expected inflation data suggests the Federal Reserve could cut interest rates by just 25 basis points in its upcoming September meeting, 
+providing slight support to the US dollar. 
+On the other hand, lower-than-expected data would increase the likelihood of 50-basis point cut, potentially boosting US stock indices such as the US2000.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240911-cpi.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="http://35.222.178.176/20240911-russ.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">RUSS2000</a> | AUDUSD</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>20:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Crude Oil Inventories</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-6.873M</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+If the increase in crude inventories is more than expected, it implies weaker demand and is bearish fo crude prices. 
+The same can be said if a decline in inventories is less than expected. 
+If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. 
+The same can be said if a decline in inventories is more than expected. 
+<br><br>Historical impact on Assets: USOILRoll</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>22:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>10-Year Note Auction</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>3.96%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+U.S. Treasury Notes have maturities of two to ten years. 
+Governments issue treasuries to borrow money to cover the gap between the amount they receive in taxes and the amunt they spend to refinance existing debt and/or to raise capital. 
+The rate on a Treasury Note represents the return an investor will receive by holding the note for its entire duration. 
+All bidders receive the same rate at the highest accepted bid.
+<br>Yield fluctuations should be monitored closely as an indicator of the government debt situation. 
+Investors compare the average rate at auction to the rate at previous auctions of the same security.
+<br><br>Historical impact on Assets: NAS100</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>5:20</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>JPY</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>1</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>PPI (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.00%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.30%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the JPY, while a lower than expected reading should be taken as negative/bearish for the JPY. 
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a></td>
+
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>5:20</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>JPY</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>1</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>PPI (YoY) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.80%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>3.00%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the JPY, while a lower than expected reading should be taken as negative/bearish for the JPY. 
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>17:45</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Deposit Facility Rate (Sep)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>3.50%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>3.75%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+According to Bloomberg, the ECB is expected to cut interest rates by 25 basis points in the September Session.
+Investors will also closely follow ECB President Christine Lagarde's press conference for insights into the central bank's future monetary policy direction. 
+Any indication of expected rate cuts this year may postively impact European stock indices such as the French CAC. 
+Conversely, any hint of a potential slowdown in the pace of rate cuts could provide support to the euro.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a>| <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">FRA40Roll</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>17:45</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>ECB Interest Rate Decision (Sep)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>3.65%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>4.25%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+According to Bloomberg, the ECB is expected to cut interest rates by 25 basis points in the September Session.
+Investors will also closely follow ECB President Christine Lagarde's press conference for insights into the central bank's future monetary policy direction. 
+Any indication of expected rate cuts this year may postively impact European stock indices such as the French CAC. 
+Conversely, any hint of a potential slowdown in the pace of rate cuts could provide support to the euro.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a>| <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">FRA40Roll</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Initial Jobless Claims</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>229K</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>227K
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as negative/bearish for the USD, while a lower than expected reading should be taken as positive/bullish for the USD.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>PPI (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.10%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
+<br><br>Historical impact on Assets: EURUSD | USDJPY | AUDUSD</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:15</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>ECB Press Conference</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+According to Bloomberg, the ECB is expected to cut interest rates by 25 basis points in the September Session.
+Investors will also closely follow ECB President Christine Lagarde's press conference for insights into the central bank's future monetary policy direction. 
+Any indication of expected rate cuts this year may postively impact European stock indices such as the French CAC. Conversely, any hint of a potential slowdown in the pace of rate cuts could provide support to the euro.
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a>| <a href="http://35.222.178.176/20240912.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">FRA40Roll</a></td>
+
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>12-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Thu </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>22:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>30-Year Bond Auction</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>4.314%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+U.S Treasury Bonds have maturities from ten up to 30 years. 
+Governments issue treasuries to borrow money to cover the gap between the amount they receive in taxes and the amount they spend to refinance exisiting debt and/or to raise capital. 
+The rate on a Treasury Bond represents the return an investor will receive by holding the bond for its entire duration. All bidders receive the same rate at the highest accepted bid.
+<br>Yield fluctuations should be monitored closely as an indicator of the government debt situation. 
+Investors compare the average rate at auction to the rate at previous auctions of the same security.
+<br><br>Historical impact on Assets: US30Roll</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>13-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Fri </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>10:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>JPY</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Industrial Production (MoM) (Jul)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.80%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-4.20%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the JPY, while a lower than expected reading should be taken as negative/bearish for the JPY. 
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240913.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>13-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Fri </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>14:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Industrial Production (MoM) (Jul)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-3.00%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-0.100%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the EUR, while a lower than expected reading should be taken as negative/bearish for the EUR. 
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240913.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>13-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Fri </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>U. Michigan Consumer Sentiment (Sep) P</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>68.4</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>67.9
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD. 
+<br><br>Historical impact on Assets: <a href="http://35.222.178.176/20240913.pdf" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a></td>
+
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'> Wed </td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Interest Rate Decision</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>5.50%
+
+  </td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A continued easing of inflation and robust labor market could give the Fed more room to implement rate cuts without stoking inflation fears, supporting the case for a soft landing. </td>
+</tr>
+</table>
+<p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 9th Sep'24, 8 PM.</p>
+<p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="font-weight: normal; text-decoration: none;">https://quantwater.tech/resources</a></p>
+</body>
+</html>
