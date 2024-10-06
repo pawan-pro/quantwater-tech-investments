@@ -1,0 +1,276 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../Economic%20Calendar%202.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+</head>
+
+<body link="#467886" vlink="#96607D">
+
+  <table border=0 cellpadding=0 cellspacing=0 width=1374 style='border-collapse: collapse;table-layout:fixed;width:1030pt'>
+  <col width=99 style='mso-width-source:userset;mso-width-alt:3157;width:74pt'>
+  <col width=63 style='mso-width-source:userset;mso-width-alt:2005;width:47pt'>
+  <col width=112 style='mso-width-source:userset;mso-width-alt:3584;width:84pt'>
+  <col width=49 style='mso-width-source:userset;mso-width-alt:1578;width:37pt'>
+  <col width=55 style='mso-width-source:userset;mso-width-alt:1749;width:41pt'>
+  <col width=353 style='mso-width-source:userset;mso-width-alt:11306;width:265pt'>
+  <col width=68 style='mso-width-source:userset;mso-width-alt:2176;width:51pt'>
+  <col class=xl75 width=88 style='mso-width-source:userset;mso-width-alt:2816; width:66pt'>
+  <col class=xl75 width=91 style='mso-width-source:userset;mso-width-alt:2901; width:68pt'>
+  <col class=xl67 width=309 style='mso-width-source:userset;mso-width-alt:9898; width:400pt'>
+  <col width=87 style='width:65pt'>
+  <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl65 width=99 style='height:16.0pt;width:74pt; padding-left: 10px;'> Date</td>
+    <td class=xl65 width=63 style='border-left:none;width:47pt; padding-left: 10px;'> Day</td>
+    <td class=xl65 width=112 style='border-left:none;width:84pt; padding-left: 10px;'> Time (IST)</td>
+    <td class=xl65 width=49 style='border-left:none;width:37pt; padding-left: 10px;'> Cur.</td>
+    <td class=xl65 width=55 style='border-left:none;width:41pt; padding-left: 10px;'> Imp.</td>
+    <td class=xl65 width=200 style='border-left:none;width:100pt; padding-left: 10px;'> Event</td>
+    <td class=xl65 width=68 style='border-left:none;width:51pt; padding-left: 10px;'> Actual</td>
+    <td class=xl74 width=88 style='border-left:none;width:66pt; padding-left: 10px;'> Forecast</td>
+    <td class=xl74 width=91 style='border-left:none;width:68pt; padding-left: 10px;'> Previous</td>
+    <td class=xl65 width=400 style='border-left:none;width:400pt; padding-left: 10px;'> Notes</td>
+   </tr>
+  <tr height=21 style='height:16.0pt'>
+   <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'> 13-Aug-24</td>
+   <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+   style='mso-spacerun:yes'> </span> Tue<span style='mso-spacerun:yes'> </span></td>
+   <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'> 18:00</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> USD</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> 3</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> PPI (MoM) (Jul)</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> 0.10%</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'> 0.20%</td>
+   <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'> Lower-than-expected PPI coild ease inflation concerns, supporting the case for Fed rate cuts and impacting USD negatively</td>
+  </tr>
+  <tr height=21 style='height:16.0pt'>
+   <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'> 14-Aug-24</td>
+   <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+   style='mso-spacerun:yes'> </span> Wed<span style='mso-spacerun:yes'> </span></td>
+   <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'> 7:30</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> NZD</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> 3</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> RBNZ Interest Rate Decision</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'> 5.50%</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'> 5.50%</td>
+   <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>According to Bloomberg, there is 77% probability of a 25-basis point rate cut. Expected rate cut could lead to NZD depreciation; however a strong commitment to lowering inflation may limit losses against USD. RBNZ press conference at 8:30 am.</td>
+  </tr>
+  <tr height=21 style='height:16.0pt'>
+   <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>14-Aug-24</td>
+   <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+   style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+   <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GBP</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (YoY) (Jul)</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>2.30%</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>2.00%</td>
+   <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Lower-than-expected inflation could pressure the BoE to consider rate cuts, impacting GBP negatively and potentially boosting UK100.</td>
+  </tr>
+  <tr height=21 style='height:16.0pt'>
+   <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>14-Aug-24</td>
+   <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+   style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+   <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>Core CPI (MoM)(Jul)</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.10%</td>
+   <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Lower core CPI could strengthen the case for aggressive Fed rate cuts, weakening USD and impacting commodities like oil.</td>
+  </tr>
+  <tr height=21 style='height:16.0pt'>
+   <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>14-Aug-24</td>
+   <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (YoY) (Jul)</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>2.90%</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>3.00%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Slight decrease expected; weaker inflation figures could lead to increased expectations for rate cuts, affecting USD.Based on at-the-money call and put options, traders are positioning for the S+P500 to move 1.2% in either direction on Wednesday, according to Citigroup.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>14-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (MoM) (Jul)</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>-0.10%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'></td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>14-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>20:00</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>Crude Oil Inventories</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>-3728M</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Continued inventory drawdown may provide temporary support to oil prices, but broader demand concerns, especially from China, could pressure Brent.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>05:20</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>JPY</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GDP (QoQ) (Q2) P</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>0.50%</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>-0.50%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'></td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GBP</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GDP (YoY) (Q2) P</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.300%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Positive GDP growth could bolster UK100, but any downside surprise may raise concerns over economic stability, impacting GBP negatively.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GBP</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GDP (MoM) (Q2) P</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.40%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Steady growth supports UK100, but volatility may arise if figures deviate significantly.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GBP</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>GDP (QoQ) (Q2) P</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.70%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Continued GDP growth could postively impact the UK100 index, boosting investor confidence in the British economy.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>Core Retail Sales (MoM) (Jul)</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>0.10%</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.40%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Weaker retail could signal slowing consumer demand, increasing recession fears and supporting rate cut expectations, affecting USD.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>Initial Jobless Claims</td> 
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>232K</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>233K</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Stable jobless claims could maitain current economic outlook, but any significant deviation could impact Fed decisions and USD.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>Philadelphia Fed Manufacturing Index (Aug)</td> 
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>7.0</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>13.9</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Lower-than-expected manufacturing index may indicate economic slowdown, influencing Fed policy and potentially weakening USD.</td>
+   </tr>
+   <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>15-Aug-24</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+    style='mso-spacerun:yes'> </span>Thur<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>Retail Sales (MoM) (Jul)</td> 
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>0.3%</td>
+    <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.0%</td>
+    <td class=xl76 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Retail sales growth, though modest, could support the case for maintaining current rates;  weak sales may increase rate cut expectations, affecting USD.</td>
+   </tr>
+  <tr height=21 style='height:16.0pt'>
+   <td height=21 class=xl68 style='height:16.0pt;border-top:none; padding-left: 10px;'>18-Sep-24</td>
+   <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'><span
+   style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+   <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>22:00</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>Next Scheduled FOMC Meet</td>
+   <td class=xl71 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+   <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+   <td class=xl77 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;''>&nbsp;</td>
+  </tr>
+  <![if supportMisalignedColumns]>
+  <tr height=0 style='display:none'>
+   <td width=99 style='width:74pt'></td>
+   <td width=63 style='width:47pt'></td>
+   <td width=112 style='width:84pt'></td>
+   <td width=49 style='width:37pt'></td>
+   <td width=55 style='width:41pt'></td>
+   <td width=353 style='width:265pt'></td>
+   <td width=68 style='width:51pt'></td>
+   <td width=88 style='width:66pt'></td>
+   <td width=91 style='width:68pt'></td>
+   <td width=309 style='width:232pt'></td>
+   <td width=87 style='width:65pt'></td>
+  </tr>
+  <![endif]>
+ </table>
+</body>
+</html>
+
+<p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 12th Aug'24, 1 PM.</p>
+
+<p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="font-weight: normal;">https://quantwater.tech/resources</a></p>
