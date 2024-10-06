@@ -1,0 +1,313 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../ec.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+  table {
+    border-collapse: collapse;
+    width: 100%;
+  }
+  table, th, td {
+    border: 2px solid #828282; /* Changed from rgb(250, 250, 250) to a blue color */
+  }
+  th, td {
+    padding: 50px;
+    text-align: left;
+  }
+  /* You can add more specific styles here if needed */
+</style>
+</head>
+
+<body link="#467886" vlink="#96607D">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1237 style='border-collapse:collapse;table-layout:fixed;width:965pt'>
+<col width=105 style='mso-width-source:userset;mso-width-alt:3157;width:85pt'>
+<col width=63 style='mso-width-source:userset;mso-width-alt:2005;width:47pt'>
+<col width=112 style='mso-width-source:userset;mso-width-alt:3584;width:84pt'>
+<col width=49 style='mso-width-source:userset;mso-width-alt:1578;width:37pt'>
+<col width=55 style='mso-width-source:userset;mso-width-alt:1749;width:41pt'>
+<col width=300 style='mso-width-source:userset;mso-width-alt:11306;width:265pt'>
+<col width=68 style='mso-width-source:userset;mso-width-alt:2176;width:51pt'>
+<col class=xl73 width=88 style='mso-width-source:userset;mso-width-alt:2816;width:66pt'>
+<col class=xl73 width=91 style='mso-width-source:userset;mso-width-alt:2901;width:68pt'>
+<col class=xl66 width=300 style='mso-width-source:userset;mso-width-alt:8648;width:350pt'>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl65 width=105 style='height:16.0pt;width:95pt; padding-left: 10px;'>Date</td>
+  <td class=xl65 width=63 style='border-left:none;width:47pt; padding-left: 10px;'>Day</td>
+  <td class=xl65 width=112 style='border-left:none;width:84pt; padding-left: 10px;'>Time (IST)</td>
+  <td class=xl65 width=49 style='border-left:none;width:37pt; padding-left: 10px;'>Cur.</td>
+  <td class=xl65 width=55 style='border-left:none;width:41pt; padding-left: 10px;'>Imp.</td>
+  <td class=xl65 width=353 style='border-left:none;width:265pt; padding-left: 10px;'>Event</td>
+  <td class=xl65 width=68 style='border-left:none;width:51pt; padding-left: 10px;'>Actual</td>
+  <td class=xl71 width=88 style='border-left:none;width:66pt; padding-left: 10px;'>Forecast</td>
+  <td class=xl71 width=91 style='border-left:none;width:68pt; padding-left: 10px;'>Previous</td>
+  <td class=xl65 width=300 style='border-left:none;width:350pt; padding-left: 10px;'>Notes</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>23-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Mon</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:15</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Manufacturing PMI (Sep) P</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>48.60</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>47.90</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is stronger than forecast is generally supportive (bullish) for the USD while a weaker than forecast reading is generally negative (bearish) for the USD.
+<br><br>Historical impact on Assets: <a href="https://www.dropbox.com/scl/fi/wkxzva63oe7p0rwmjquo9/20240923.pdf?rlkey=ilo7n08gj2bkkwlj8imavqxx4&st=hkver538&dl=0" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">EURUSD</a> | 
+<a href="https://www.dropbox.com/scl/fi/wkxzva63oe7p0rwmjquo9/20240923.pdf?rlkey=ilo7n08gj2bkkwlj8imavqxx4&st=hkver538&dl=0" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a></td>
+
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>23-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Mon</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:15</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Services PMI (Sep) P</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>55.30</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>55.70</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+<br><br>Historical impact on Assets: <a href="https://www.dropbox.com/scl/fi/wkxzva63oe7p0rwmjquo9/20240923.pdf?rlkey=ilo7n08gj2bkkwlj8imavqxx4&st=hkver538&dl=0" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">EURUSD</a> | 
+<a href="https://www.dropbox.com/scl/fi/wkxzva63oe7p0rwmjquo9/20240923.pdf?rlkey=ilo7n08gj2bkkwlj8imavqxx4&st=hkver538&dl=0" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a></td></tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>24-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>10:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>AUD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>RBA Interest Rate Decision (Sep)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>4.35%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>4.35%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+    Investors will closely monitor the Reserve Bank of Australia's decision on interest rates, along with the monetary policy statement and press conference. 
+    <br><br>Bloomberg anticipates the RBA will maintain interest rates at 4.35%, as inflation trends in Australia are not aligning with the central bank's targets. 
+    The country's consumer price index has risen from 3.6% in Q1 to 3.8% in Q2 of this year. 
+    Markets expect the RBA to start reducing interest rates by its December meeting, with a 55% likelihood, according to Bloomberg. 
+    <br><br>Investors are looking to the upcoming press conference for more insight into the future direction of monetary policy. 
+    Any indication that the central bank might join other major banks in cutting rates before the end of the year could negatively impact the Australian dollar's value against currencies like the US dollar. 
+    A more dovish than expected statement could be taken as negative/bearish for the AUD, while a more hawkish than expected statement could be taken as positive/bullish for the AUD.
+    <br><br>
+    Historical impact on Assets: 
+    <a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">AUDUSD</a>
+     | 
+     <a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">AUDJPY</a>
+     | 
+     <a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">AUDCAD</a>
+    </td>
+    </tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>24-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>11:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>AUD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>RBA Rate Statement</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+Investors will closely monitor the Reserve Bank of Australia's decision on interest rates, along with the monetary policy statement and press conference. 
+<br><br>Bloomberg anticipates the RBA will maintain interest rates at 4.35%, as inflation trends in Australia are not aligning with the central bank's targets. 
+The country's consumer price index has risen from 3.6% in Q1 to 3.8% in Q2 of this year. 
+Markets expect the RBA to start reducing interest rates by its December meeting, with a 55% likelihood, according to Bloomberg. 
+<br><br>Investors are looking to the upcoming press conference for more insight into the future direction of monetary policy. 
+Any indication that the central bank might join other major banks in cutting rates before the end of the year could negatively impact the Australian dollar's value against currencies like the US dollar. 
+A more dovish than expected statement could be taken as negative/bearish for the AUD, while a more hawkish than expected statement could be taken as positive/bullish for the AUD.
+<br><br>
+Historical impact on Assets: 
+<a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">AUDUSD</a>
+ | 
+ <a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">AUDJPY</a>
+ | 
+ <a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">AUDCAD</a>
+</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>24-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CB Consumer Confidence (Sep)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>103.50</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>103.30</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+<br><br>Historical impact on Assets: 
+<a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">EURUSD</a>
+| 
+<a href="https://drive.google.com/file/d/1sorEsKQcqjD9VNNuXOCrn1cGWKvtgFyH/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a>
+</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>25-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>New Home Sales (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>700K</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>739K</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/198IXXdjoXVqi-AHzGuPycPNvP2Pa_lV2/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a> |
+<a href="https://drive.google.com/file/d/198IXXdjoXVqi-AHzGuPycPNvP2Pa_lV2/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">EURUSD
+</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>25-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>20:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Crude Oil Inventories</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-1.630M</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
+If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/198IXXdjoXVqi-AHzGuPycPNvP2Pa_lV2/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USOILX4</a>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>26-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>13:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CHF</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>SNB Interest Rate Decision (Q3)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>1.00%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>1.25%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+According to Bloomberg, the Swiss Central Bank is expected to lower interest rates by 25 basis points, from 1.25% to 1.00%, due to a decline in inflation, which remains below the 2% target. Swiss inflation dropped from 1.3% in July to 1.1% in August. Notably, the Swiss Central Bank was among the first to initiate rate cuts this year, followed by central banks in Canada, Europe, and the UK. 
+<br><br>Investor will pay close attention to the Swiss National Bank's press conference for further insight into the future of Swiss monetary policy. Any signals about the continuation of the current rate-cutting strategy could have a positive impact on Swiss indices, such as the SWISS (SMI) index. 
+<br><br>A reading that is stronger than forecast is generally supportive (bullish) for the CHF, while a weaker than forecast reading is generally negative (bearish) for the CHF.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/1BwSLkJeZFMEqtP5fEDKsZPmFtc1Mdu4l/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDCHF</a>
+
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>26-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>13:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CHF</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>SNB Press Conference</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+According to Bloomberg, the Swiss Central Bank is expected to lower interest rates by 25 basis points, from 1.25% to 1.00%, due to a decline in inflation, which remains below the 2% target. Swiss inflation dropped from 1.3% in July to 1.1% in August. Notably, the Swiss Central Bank was among the first to initiate rate cuts this year, followed by central banks in Canada, Europe, and the UK. 
+<br><br>Investor will pay close attention to the Swiss National Bank's press conference for further insight into the future of Swiss monetary policy. Any signals about the continuation of the current rate-cutting strategy could have a positive impact on Swiss indices, such as the SWISS (SMI) index.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/1BwSLkJeZFMEqtP5fEDKsZPmFtc1Mdu4l/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDCHF</a> | SMI
+</tr>
+
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>26-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Durable Goods Orders (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-2.80%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>9.90%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/1BwSLkJeZFMEqtP5fEDKsZPmFtc1Mdu4l/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a>
+
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>26-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Initial Jobless Claims</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>219K</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/1BwSLkJeZFMEqtP5fEDKsZPmFtc1Mdu4l/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>26-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:50</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Chair Powell Speaks</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+Federal Reserve Chair Jerome Powell (Feb. 2018 – Feb. 2026) is to speak. As head of the Fed, which controls short term interest rates, he has more influence over the U.S. dollar's value than any other person. Traders closely watch his speeches as they are often used to drop hints regarding future monetary policy.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/1BwSLkJeZFMEqtP5fEDKsZPmFtc1Mdu4l/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>27-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core PCE Price Index (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+Traders will eagerly await the release of the US Personal Consumption Expenditures Index data for August, which is the Federal Reserve's preferred gauge of inflation in the US. 
+<br><br>Bloomberg forecasts suggest the main index will decrease annually from 2.5% in July to 2.3% in August, while the core index data on an annual basis could increase from 2.6% to 2.7%. The Federal Reserve defied market expectations in its meeting last week by cutting US interest rates by 50 basis points instead of the anticipated 25. The Fed dot plot suggests the possibility of an additional 50 basis point cut by the end of the year. As a result, any weaker-than-expected data, particularly in core personal spending, could lead the US central bank to proceed with these cuts, potentially boosting US stock indices, especially US500 & US2000 index. 
+<br><br>A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+<br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/13oPw_iRpiw-6W-WdKwzMvUN9RUYx7RBf/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a>
+
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>27-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core PCE Price Index (YoY) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.60%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+    Traders will eagerly await the release of the US Personal Consumption Expenditures Index data for August, which is the Federal Reserve's preferred gauge of inflation in the US. 
+    <br><br>Bloomberg forecasts suggest the main index will decrease annually from 2.5% in July to 2.3% in August, while the core index data on an annual basis could increase from 2.6% to 2.7%. The Federal Reserve defied market expectations in its meeting last week by cutting US interest rates by 50 basis points instead of the anticipated 25. The Fed dot plot suggests the possibility of an additional 50 basis point cut by the end of the year. As a result, any weaker-than-expected data, particularly in core personal spending, could lead the US central bank to proceed with these cuts, potentially boosting US stock indices, especially US500 & US2000 index. 
+    <br><br>A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+    <br><br>Historical impact on Assets: <a href="https://drive.google.com/file/d/13oPw_iRpiw-6W-WdKwzMvUN9RUYx7RBf/view?usp=share_link" style="color: rgb(168, 168, 255); text-decoration: underline;" target="_blank">USDJPY</a>
+  </tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>07-Nov-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Interest Rate Decision</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>4.52%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>4.75%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A continued easing of inflation and robust labour market could give the Fed more room to implement rate cuts without stoking inflation fears, supporting the case for a soft landing.</td>
+</tr>
+</table>
+<p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 22nd September 2024, 6PM.</p>
+<p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="font-weight: normal; text-decoration: none;">https://quantwater.tech/resources</a></p>
+</body>
+</html>
