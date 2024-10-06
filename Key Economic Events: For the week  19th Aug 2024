@@ -1,0 +1,259 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../ec.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+</head>
+
+<body link="#467886" vlink="#96607D">
+
+  <table border=0 cellpadding=0 cellspacing=0 width=1287 style='border-collapse: collapse;table-layout:fixed;width:965pt'>
+  <col width=99 style='mso-width-source:userset;mso-width-alt:3157;width:74pt'>
+  <col width=63 style='mso-width-source:userset;mso-width-alt:2005;width:47pt'>
+  <col width=112 style='mso-width-source:userset;mso-width-alt:3584;width:84pt'>
+  <col width=49 style='mso-width-source:userset;mso-width-alt:1578;width:37pt'>
+  <col width=55 style='mso-width-source:userset;mso-width-alt:1749;width:41pt'>
+  <col width=250 style='mso-width-source:userset;mso-width-alt:11306;width:250pt'>
+  <col width=68 style='mso-width-source:userset;mso-width-alt:2176;width:51pt'>
+  <col class=xl73 width=88 style='mso-width-source:userset;mso-width-alt:2816; width:66pt'>
+  <col class=xl73 width=91 style='mso-width-source:userset;mso-width-alt:2901; width:68pt'>
+  <col class=xl66 width=250 style='mso-width-source:userset;mso-width-alt:9898; width:232pt'>
+  <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl65 width=99 style='height:16.0pt;width:74pt; padding-left: 10px;'>Date</td>
+    <td class=xl65 width=63 style='border-left:none;width:47pt; padding-left: 10px;'>Day</td>
+    <td class=xl65 width=112 style='border-left:none;width:84pt; padding-left: 10px;'>Time (IST)</td>
+    <td class=xl65 width=49 style='border-left:none;width:37pt; padding-left: 10px;'>Cur.</td>
+    <td class=xl65 width=55 style='border-left:none;width:41pt; padding-left: 10px;'>Imp.</td>
+    <td class=xl65 width=200 style='border-left:none;width:250pt; padding-left: 10px;'>Event</td>
+    <td class=xl65 width=68 style='border-left:none;width:51pt; padding-left: 10px;'>Actual</td>
+    <td class=xl71 width=88 style='border-left:none;width:66pt; padding-left: 10px;'>Forecast</td>
+    <td class=xl71 width=91 style='border-left:none;width:68pt; padding-left: 10px;'>Previous</td>
+    <td class=xl65 width=300 style='border-left:none;width:350pt; padding-left: 10px;'>Notes</td>
+  </tr>
+  <tr height=53 style='height:40.0pt'>
+    <td height=53 class=xl67 style='height:40.0pt;border-top:none; padding-left: 10px;'>20-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Tue<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>13:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>SEK</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Riksbank Interest Rate Decision </td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>3.75%</td>
+    <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'> Markets are fully pricing in a rate cut by the Riksbank, with the primary debate centered around whether the cut will be 25 or 50 basis points.</td>
+  </tr>
+  <tr height=53 style='height:40.0pt'>
+    <td height=53 class=xl67 style='height:40.0pt;border-top:none; padding-left: 10px;'>20-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Tue<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>14:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (YoY) (Jul)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>2.60%</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>2.50%</td>
+    <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>According to Bloomberg, European inflation is expected to increase slightly from 2.5% in June to 2.6% in July, with core inflation (excluding energy and food) remaining unchanged at 2.9%.<br>Notably, if inflation data comes in lower than expected, it could boost investors' confidence in the European Central Bank's intention to cut interest rates by 25 basis points at its upcoming September meeting.</br><br>Additionally, this could raise the likelihood of another rate cut in October, which markets currently estimate at a 63% probability, according to Bloomberg. The increased chance of rate cuts could apply downward pressure on the euro against other major currencies.</br></td>
+  </tr>
+  <tr height=139 style='height:104.0pt'>
+    <td height=139 class=xl67 style='height:104.0pt;border-top:none; padding-left: 10px;'>21-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>20:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Crude Oil Inventories</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>1.357M</td>
+    <td class=xl79 width=350 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>The weekly oil inventory data could influence global oil prices, especially in the context of economic growth concerns. Continued drawdowns may temporarily support prices.</td>
+  </tr>
+  <tr height=156 style='height:117.0pt'>
+    <td height=156 class=xl67 style='height:117.0pt;border-top:none; padding-left: 10px;'>21-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>FOMC Meeting Minutes</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl79 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>These minutes will provide insight into the Fed’s internal discussions regarding rate cuts. Markets will be looking for signs of how aggressive the Fed might be in reducing rates.</td>
+  </tr>
+  <tr height=121 style='height:91.0pt'>
+    <td height=121 class=xl67 style=‘height:91.0pt;border-top:none; padding-left: 10px;’>22-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Thu<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Initial Jobless Claims</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>233K</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>227K</td>
+    <td class=xl79 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>Stable jobless claims are essential for maintaining the current economic outlook. Any significant deviation could impact the Fed’s decisions and the USD. Given recent strong labor market data, markets will be sensitive to any signs of weakening, which could support the case for rate cuts and influence USDXXX pairs.</td>
+</tr>
+<tr height=121 style='height:91.0pt'>
+  <td height=121 class=xl67 style='height:91.0pt;border-top:none; padding-left: 10px;'>22-Aug-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Thu<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:15</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>S&amp;P Global US Manufacturing PMI (Aug) P</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>49.8 </td>
+  <td class=xl77 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>49.6 </td>
+  <td class=xl79 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>In July, the manufacturing PMI fell into the contraction zone, intensifying concerns about a potential economic recession in the United States. This, along with other factors, triggered a sharp sell-off in the markets last week, though most losses were recovered by the week's end.<br>If the manufacturing and services PMI data come in above 50, it could lift market sentiment, driving up prices for major US stock indices, particularly the US500 index.</br></td>
+</tr>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl67 style='height:16.0pt;border-top:none; padding-left: 10px;'>22-Aug-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Thu<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:15</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>S&amp;P Global Services PMI (Aug) P</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>54.0 </td>
+  <td class=xl77 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>55.0 </td>
+  <td class=xl79 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>&nbsp;</td>
+</tr>
+<tr height=104 style='height:78.0pt'>
+  <td height=104 class=xl67 style='height:78.0pt;border-top:none; padding-left: 10px;'>22-Aug-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Thu<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Existing Home Sales (Jul)</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl77 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>3.92M<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl77 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>3.89M<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl79 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>The housing market data will be closely watched as an indicator of consumer confidence and economic stability. A strong report could ease concerns about a slowing economy, while weaker-than-expected numbers could add to recession fears and support the case for rate cuts.</td>
+</tr>
+<tr height=121 style='height:91.0pt'>
+  <td height=121 class=xl67 style='height:91.0pt;border-top:none; padding-left: 10px;'>23-Aug-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Fri<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>6:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>JPY</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>
+  <!doctype>
+  <meta charset=UTF-8>
+  BOJ Gov. Ueda speaks<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl79 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>BoJ Governor Kazuo Ueda will speak at a lower parliamentary committee from 9:30 a.m. to noon wrt July Hike. BoJ Governor Kazuo Ueda will provide insights into Japan’s economic outlook following the July rate hike. His comments could influence global markets, particularly the JPY and USDXXX pairs.</td>
+</tr>
+<tr height=175 style='height:131.0pt'>
+  <td height=175 class=xl67 style='height:131.0pt;border-top:none; padding-left: 10px;'>23-Aug-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Fri<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Chair Powell Speaks | Jackson Hole</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>This is one of the most anticipated events of the week. Powell’s remarks are expected to shape expectations for future Fed rate cuts and will be crucial for understanding the Fed’s outlook on inflation, employment, and the broader economy. His comments could have significant implications for both FX and equity markets, including the Nasdaq. Any indication from Powell’s speech of an unusually large rate cut in September (50 basis points) could weaken the US dollar and boost the price of precious metals like silver, with the focus ultimately on whether Powell signals a potential soft landing for the US economy.</td>
+</tr>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl67 style='height:16.0pt;border-top:none; padding-left: 10px;'>23-Aug-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Fri<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>New Home Sales (Jul)</td>
+  <td class=xl75 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>628K</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>617K</td>
+  <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'> </td>
+</tr>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl67 style='height:16.0pt;border-top:none; padding-left: 10px;'>06-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Fri<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Average Hourly Earnings (MoM) (Aug)</td>
+  <td class=xl75 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl78 width=350 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>&nbsp;</td>
+</tr>
+<tr height=71 style='height:53.0pt'>
+  <td height=71 class=xl67 style='height:53.0pt;border-top:none; padding-left: 10px;'>06-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Fri<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Nonfarm Payrolls (Aug)</td>
+  <td class=xl75 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>114K</td>
+  <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>A strong report, indicating robust job creation, could ease concerns about an economic slowdown and support the narrative of a soft landing.</td>
+</tr>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl67 style='height:16.0pt;border-top:none; padding-left: 10px;'>06-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Fri<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Unemployment Rate (Aug)</td>
+  <td class=xl75 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>4.30%</td>
+  <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>&nbsp;</td>
+</tr>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl67 style='height:16.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI report</td>
+  <td class=xl75 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>A continued easing of inflation could give the Fed more room to implement rate cuts without stoking inflation fears, supporting the case for a soft landing.</td>
+</tr>
+<tr height=71 style='height:53.0pt'>
+  <td height=71 class=xl67 style='height:53.0pt;border-top:none; padding-left: 10px;'>18-Sep-24</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Wed<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD<span style='mso-spacerun:yes'> </span></td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Interest Rate Decision</td>
+  <td class=xl75 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl72 style='border-top:none;border-left:none; padding-left: 10px;'>5.50%</td>
+  <td class=xl78 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'><span style='mso-spacerun:yes'> </span></td>
+</tr>
+<![if supportMisalignedColumns]>
+<tr height=0 style='display:none'>
+  <td width=99 style='width:74pt'></td>
+  <td width=63 style='width:47pt'></td>
+  <td width=112 style='width:84pt'></td>
+  <td width=49 style='width:37pt'></td>
+  <td width=55 style='width:41pt'></td>
+  <td width=353 style='width:265pt'></td>
+  <td width=68 style='width:51pt'></td>
+  <td width=88 style='width:66pt'></td>
+  <td width=91 style='width:68pt'></td>
+  <td width=300 style='width:300pt'></td>
+</tr>
+<![endif]>
+</table>
+<p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 18th Aug'24, 5 PM.</p>
+<p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="font-weight: normal;">https://quantwater.tech/resources</a></p>
+</body>
+</html>
