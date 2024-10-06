@@ -1,0 +1,266 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../ec.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+  table, th, td {
+    border: 1px solid black;
+    border-collapse: collapse;
+  }
+</style>
+</head>
+
+<body link="#467886" vlink="#96607D">
+
+  <table border=0 cellpadding=0 cellspacing=0 width=1287 style='border-collapse:collapse;table-layout:fixed;width:965pt'>
+  <col width=99 style='mso-width-source:userset;mso-width-alt:3157;width:74pt'>
+  <col width=63 style='mso-width-source:userset;mso-width-alt:2005;width:47pt'>
+  <col width=112 style='mso-width-source:userset;mso-width-alt:3584;width:84pt'>
+  <col width=49 style='mso-width-source:userset;mso-width-alt:1578;width:37pt'>
+  <col width=55 style='mso-width-source:userset;mso-width-alt:1749;width:41pt'>
+  <col width=250 style='mso-width-source:userset;mso-width-alt:11306;width:250pt'>
+  <col width=68 style='mso-width-source:userset;mso-width-alt:2176;width:51pt'>
+  <col class=xl73 width=88 style='mso-width-source:userset;mso-width-alt:2816; width:66pt'>
+  <col class=xl73 width=91 style='mso-width-source:userset;mso-width-alt:2901; width:68pt'>
+  <col class=xl66 width=400 style='mso-width-source:userset;mso-width-alt:9898; width:400pt'>
+  <tr height=21 style='height:16.0pt'>
+    <td height=21 class=xl65 width=99 style='height:16.0pt;width:74pt; padding-left: 10px;'>Date</td>
+    <td class=xl65 width=63 style='border-left:none;width:47pt; padding-left: 10px;'>Day</td>
+    <td class=xl65 width=112 style='border-left:none;width:84pt; padding-left: 10px;'>Time (IST)</td>
+    <td class=xl65 width=49 style='border-left:none;width:37pt; padding-left: 10px;'>Cur.</td>
+    <td class=xl65 width=55 style='border-left:none;width:41pt; padding-left: 10px;'>Imp.</td>
+    <td class=xl65 width=200 style='border-left:none;width:250pt; padding-left: 10px;'>Event</td>
+    <td class=xl65 width=68 style='border-left:none;width:51pt; padding-left: 10px;'>Actual</td>
+    <td class=xl71 width=88 style='border-left:none;width:66pt; padding-left: 10px;'>Forecast</td>
+    <td class=xl71 width=91 style='border-left:none;width:68pt; padding-left: 10px;'>Previous</td>
+    <td class=xl65 width=400 style='border-left:none;width:400pt; padding-left: 10px;'>Notes</td>
+  </tr>
+  <tr height=144 style='height:144.0pt'>
+    <td height=144 class=xl67 style='height:144.0pt;border-top:none; padding-left: 10px;'>26-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'><span style='mso-spacerun:yes'> </span>Mon<span style='mso-spacerun:yes'> </span></td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Durable Goods Orders (MoM) (Jul)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>0.4%</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>-6.6%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>The significant rebound in durable goods orders suggests stabilization in business investments, which could be a positive signal for the US economy. This data reinforces expectations for a soft landing. If actual data is better than forecasted, it could strengthen the USD and positively impact NASDAQ, as it signals economic resilience. If data is worse than expected, it may weaken the USD and pressure NASDAQ, raising concerns about economic slowdown.</td>
+  </tr>
+  <tr height=118 style='height:118.0pt'>
+    <td height=118 class=xl67 style='height:118.0pt;border-top:none; padding-left: 10px;'>27-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>German GDP (QoQ) (Q2)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>-0.1%</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>0.2%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>The slight contraction in Germany's GDP raises concerns about the broader Eurozone economy. Investors will be watching closely for signals from the ECB regarding potential rate cuts. Better-than-expected GDP could support the Euro and ease concerns about a Eurozone recession, while worse-than-expected data could weaken the Euro and increase the likelihood of a soft landing through potential ECB rate cuts.</td>
+  </tr>
+  <tr height=92 style='height:92.0pt'>
+    <td height=92 class=xl67 style='height:92.0pt;border-top:none; padding-left: 10px;'>27-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CB Consumer Confidence (Aug)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>100.1</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>100.3</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Further declines could prompt the Fed to consider more aggressive rate cuts. Stronger-than-expected consumer confidence could bolster the USD and NASDAQ, supporting the soft landing narrative. If confidence falls short, it may increase expectations for larger rate cuts, potentially weakening the USD.</td>
+  </tr>
+  <tr height=92 style='height:92.0pt'>
+    <td height=92 class=xl67 style='height:92.0pt;border-top:none; padding-left: 10px;'>28-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>20:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Crude Oil Inventories</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>-4.649M</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Continued drawdowns in oil inventories could temporarily support oil prices, but broader economic trends, particularly in China, might limit gains. If inventories drop more than expected, oil prices might rise. Conversely, with smaller-than-expected drawdowns, oil prices might decline.</td>
+  </tr>
+  <tr height=131 style='height:131.0pt'>
+    <td height=131 class=xl67 style='height:131.0pt;border-top:none; padding-left: 10px;'>29-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>01:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>NVIDIA Earnings Report (Q2)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>NVIDIA's earnings report is critical for NASDAQ, given its influence on the tech sector. Investors are watching if NVIDIA meets or exceeds projections of $0.64 EPS & $28.65 billion in revenue. If NVIDIA outperforms expectations, it could drive NASDAQ higher, reinforcing confidence in a soft landing. A miss could trigger a sell-off in tech stocks, potentially impacting broader market sentiment.</td>
+  </tr>
+  <tr height=118 style='height:118.0pt'>
+    <td height=118 class=xl67 style='height:118.0pt;border-top:none; padding-left: 10px;'>29-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>17:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>German CPI (MoM) (Aug) P</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>0.3%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>German CPI will influence ECB's upcoming decisions. A lower-than-expected CPI could increase the likelihood of rate cuts, impacting the Euro. Higher-than-expected CPI could reduce chances of ECB rate cuts, strengthening the Euro, while lower CPI would likely weaken the Euro, supporting the soft landing narrative by justifying further easing.</td>
+  </tr>
+  <tr height=105 style='height:105.0pt'>
+    <td height=105 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>29-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>US GDP (QoQ) (Q2) P</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>2.8%</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>1.4%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>The stronger-than-expected GDP growth suggests US economic resilience, reducing the urgency for aggressive rate cuts. Better-than-expected GDP would likely boost the USD and NASDAQ, reinforcing the soft landing scenario. Lower-than-expected GDP might raise concerns about economic slowing, weakening the USD & NASDAQ.</td>
+  </tr>
+  <tr height=66 style='height:66.0pt'>
+    <td height=66 class=xl67 style='height:66.0pt;border-top:none; padding-left: 10px;'>29-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Initial Jobless Claims</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>232K</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>Lower-than-expected claims could strengthen the USD and NASDAQ, signaling a robust labor market supportive of a soft landing. Higher claims could weaken the USD and raise concerns about economic resilience.</td>
+  </tr>
+  <tr height=92 style='height:92.0pt'>
+    <td height=92 class=xl67 style='height:92.0pt;border-top:none; padding-left: 10px;'>30-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Europe CPI (YoY) (Aug) P</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>2.3%</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>2.6%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>The European CPI will be a key data point for the ECB's policy decisions. If CPI is lower than expected, it could pressure the Euro and boost equities like ESTOX, aligning with expectations for ECB rate cuts. Higher CPI might strengthen the Euro but dampen equity markets, impacting the soft landing narrative.</td>
+  </tr>
+  <tr height=53 style='height:53.0pt'>
+    <td height=53 class=xl67 style='height:53.0pt;border-top:none; padding-left: 10px;'>30-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core PCE Price Index (YoY) (Jul)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>2.6%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>&nbsp;</td>
+  </tr>
+  <tr height=144 style='height:144.0pt'>
+    <td height=144 class=xl67 style='height:144.0pt;border-top:none; padding-left: 10px;'>30-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core PCE Price Index (MoM) (Jul)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>0.2%</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>The Core PCE index is the Fed's preferred inflation measure. Better-than-expected PCE could reduce expectations for aggressive rate cuts, supporting the USD and weighing on XAG/USD (Silver) as a stronger dollar typically pressures silver prices. Lower-than-expected PCE would likely increase the odds of a larger rate cut, weakening the USD and boosting XAG/USD, aligning with the potential for a softer landing for the economy.</td>
+  </tr>
+  <tr height=105 style='height:105.0pt'>
+    <td height=105 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>30-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:15</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Chicago PMI (Aug)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>45.3</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>The Chicago PMI will provide insights into the health of the manufacturing sector. A reading below expectations could reinforce concerns about a potential economic slowdown. Higher-than-expected PMI could boost the USD, signaling economic resilience and supporting the soft landing narrative. Lower PMI might weaken USD and raise recession fears.</td>
+  </tr>
+  <tr height=105 style='height:105.0pt'>
+    <td height=105 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>31-Aug-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Sat</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>07:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CNY</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Manufacturing PMI (Aug)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>49.4</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>China's PMI data will have global implications, particularly for commodity markets and global growth outlooks. Better-than-expected PMI could ease global growth concerns, positively impacting commodity prices and global equities. Lower PMI might trigger risk-off sentiment, weakening commodities and equities globally.</td>
+  </tr>
+  <tr height=53 style='height:53.0pt'>
+    <td height=53 class=xl67 style='height:53.0pt;border-top:none; padding-left: 10px;'>06-Sep-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Average Hourly Earnings (MoM) (Aug)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>0.2%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>&nbsp;</td>
+  </tr>
+  <tr height=71 style='height:71.0pt'>
+    <td height=71 class=xl67 style='height:71.0pt;border-top:none; padding-left: 10px;'>06-Sep-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Non Farm Payrolls (Aug)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>114K</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>A strong report, indicating robust job creation, could ease concerns about an economic slowdown and support the narrative of a soft landing.</td>
+  </tr>
+  <tr height=53 style='height:53.0pt'>
+    <td height=53 class=xl67 style='height:53.0pt;border-top:none; padding-left: 10px;'>06-Sep-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Unemployment Rate (Aug)</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>4.3%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>A strong report, indicating robust job creation, could ease concerns about an economic slowdown and support the narrative of a soft landing.</td>
+  </tr>
+  <tr height=53 style='height:53.0pt'>
+    <td height=53 class=xl67 style='height:53.0pt;border-top:none; padding-left: 10px;'>11-Sep-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI Report</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>A continued easing of inflation could give the Fed more room to implement rate cuts without stoking inflation fears, supporting the case for a soft landing.</td>
+  </tr>
+  <tr height=105 style='height:105.0pt'>
+    <td height=105 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep-24</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Interest Rate Decision</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>5.25%</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>5.50%</td>
+    <td class=xl78 width=400 style='border-top:none;border-left:none;width:400pt; padding-left: 10px;'>The Fed's decision will reflect its assessment of the economic outlook and inflationary pressure. If the Fed signals further rate cuts are necessary, it could weaken the USD, supporting the soft landing scenario. A more aggressive approach could weaken the USD further and might dampen equity markets, raising concerns about economic slowing.</td>
+  </tr>
+  </table>
+<p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 25th Aug'24, 9 PM.</p>
+<p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="font-weight: normal;">https://quantwater.tech/resources</a></p>
+</body>
+</html>
