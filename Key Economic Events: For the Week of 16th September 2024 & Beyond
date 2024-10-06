@@ -1,0 +1,366 @@
+<html xmlns:v="urn:schemas-microsoft-com:vml"
+xmlns:o="urn:schemas-microsoft-com:office:office"
+xmlns:x="urn:schemas-microsoft-com:office:excel"
+xmlns="http://www.w3.org/TR/REC-html40">
+
+<head>
+<meta http-equiv=Content-Type content="text/html; charset=utf-8">
+<meta name=ProgId content=Excel.Sheet>
+<meta name=Generator content="Microsoft Excel 15">
+<link id=Main-File rel=Main-File href="../ec.htm">
+<link rel=File-List href=filelist.xml>
+<link rel=Stylesheet href=stylesheet.css>
+<style>
+    table {
+      border-collapse: collapse;
+      width: 100%;
+    }
+    table, th, td {
+      border: 50px solid rgb(250, 250, 250);
+    }
+    th, td {
+      padding: 50px;
+      text-align: left;
+    }
+</style>
+</head>
+
+<body link="#467886" vlink="#96607D">
+
+<table border=0 cellpadding=0 cellspacing=0 width=1237 style='border-collapse:collapse;table-layout:fixed;width:965pt'>
+<col width=105 style='mso-width-source:userset;mso-width-alt:3157;width:85pt'>
+<col width=63 style='mso-width-source:userset;mso-width-alt:2005;width:47pt'>
+<col width=112 style='mso-width-source:userset;mso-width-alt:3584;width:84pt'>
+<col width=49 style='mso-width-source:userset;mso-width-alt:1578;width:37pt'>
+<col width=55 style='mso-width-source:userset;mso-width-alt:1749;width:41pt'>
+<col width=300 style='mso-width-source:userset;mso-width-alt:11306;width:265pt'>
+<col width=68 style='mso-width-source:userset;mso-width-alt:2176;width:51pt'>
+<col class=xl73 width=88 style='mso-width-source:userset;mso-width-alt:2816;width:66pt'>
+<col class=xl73 width=91 style='mso-width-source:userset;mso-width-alt:2901;width:68pt'>
+<col class=xl66 width=300 style='mso-width-source:userset;mso-width-alt:8648;width:350pt'>
+<tr height=21 style='height:16.0pt'>
+  <td height=21 class=xl65 width=105 style='height:16.0pt;width:95pt; padding-left: 10px;'>Date</td>
+  <td class=xl65 width=63 style='border-left:none;width:47pt; padding-left: 10px;'>Day</td>
+  <td class=xl65 width=112 style='border-left:none;width:84pt; padding-left: 10px;'>Time (IST)</td>
+  <td class=xl65 width=49 style='border-left:none;width:37pt; padding-left: 10px;'>Cur.</td>
+  <td class=xl65 width=55 style='border-left:none;width:41pt; padding-left: 10px;'>Imp.</td>
+  <td class=xl65 width=353 style='border-left:none;width:265pt; padding-left: 10px;'>Event</td>
+  <td class=xl65 width=68 style='border-left:none;width:51pt; padding-left: 10px;'>Actual</td>
+  <td class=xl71 width=88 style='border-left:none;width:66pt; padding-left: 10px;'>Forecast</td>
+  <td class=xl71 width=91 style='border-left:none;width:68pt; padding-left: 10px;'>Previous</td>
+  <td class=xl65 width=300 style='border-left:none;width:350pt; padding-left: 10px;'>Notes</td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>17-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core Retail Sales (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.40%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+US retail sales data for August is set for release this week, and Bloomberg expects the number to decline from July's figure of 1.0% to 0.2%. If it comes in above expectations, it could elevate inflation levels, strengthening the US dollar against other major currencies, and vice versa.
+
+At the same time, markets will also look forward to Canadian inflation data for August. Bloomberg forecasts suggest that YoY CPI will decrease from 2.5% in July to 2.1% in August, largely due to falling energy prices. The YoY Core CPI is also expected to drop slightly from 2.7% in July to 2.6% in August. Higher-than-expected readings could prompt the Bank of Canada to consider slowing its rate cuts pace, providing support for the Canadian dollar against major currencies like the US dollar.
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | <a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDCAD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>17-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Retail Sales (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-0.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>1.00%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+US retail sales data for August is set for release this week, and Bloomberg expects the number to decline from July's figure of 1.0% to 0.2%. If it comes in above expectations, it could elevate inflation levels, strengthening the US dollar against other major currencies, and vice versa.
+
+At the same time, markets will also look forward to Canadian inflation data for August. Bloomberg forecasts suggest that YoY CPI will decrease from 2.5% in July to 2.1% in August, largely due to falling energy prices. The YoY Core CPI is also expected to drop slightly from 2.7% in July to 2.6% in August. Higher-than-expected readings could prompt the Bank of Canada to consider slowing its rate cuts pace, providing support for the Canadian dollar against major currencies like the US dollar.
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDCAD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>17-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CAD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core CPI (YoY) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>1.70%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+US retail sales data for August is set for release this week, and Bloomberg expects the number to decline from July's figure of 1.0% to 0.2%. If it comes in above expectations, it could elevate inflation levels, strengthening the US dollar against other major currencies, and vice versa.
+
+At the same time, markets will also look forward to Canadian inflation data for August. Bloomberg forecasts suggest that YoY CPI will decrease from 2.5% in July to 2.1% in August, largely due to falling energy prices. The YoY Core CPI is also expected to drop slightly from 2.7% in July to 2.6% in August. Higher-than-expected readings could prompt the Bank of Canada to consider slowing its rate cuts pace, providing support for the Canadian dollar against major currencies like the US dollar.
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDCAD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>17-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CAD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Core CPI (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.30%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+US retail sales data for August is set for release this week, and Bloomberg expects the number to decline from July's figure of 1.0% to 0.2%. If it comes in above expectations, it could elevate inflation levels, strengthening the US dollar against other major currencies, and vice versa.
+
+At the same time, markets will also look forward to Canadian inflation data for August. Bloomberg forecasts suggest that YoY CPI will decrease from 2.5% in July to 2.1% in August, largely due to falling energy prices. The YoY Core CPI is also expected to drop slightly from 2.7% in July to 2.6% in August. Higher-than-expected readings could prompt the Bank of Canada to consider slowing its rate cuts pace, providing support for the Canadian dollar against major currencies like the US dollar.
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDCAD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>17-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Tue</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CAD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>2</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (MoM) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.10%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.40%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+US retail sales data for August is set for release this week, and Bloomberg expects the number to decline from July's figure of 1.0% to 0.2%. If it comes in above expectations, it could elevate inflation levels, strengthening the US dollar against other major currencies, and vice versa.
+
+At the same time, markets will also look forward to Canadian inflation data for August. Bloomberg forecasts suggest that YoY CPI will decrease from 2.5% in July to 2.1% in August, largely due to falling energy prices. The YoY Core CPI is also expected to drop slightly from 2.7% in July to 2.6% in August. Higher-than-expected readings could prompt the Bank of Canada to consider slowing its rate cuts pace, providing support for the Canadian dollar against major currencies like the US dollar.
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | 
+<a href="https://drive.google.com/file/d/10hswd50T72yy73qkbOUlUOKcXdUHSV46/view" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDCAD</a></td>
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>11:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>GBP</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (YoY) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.20%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is stronger than forecast is generally supportive (bullish) for the GBP, while a weaker than forecast reading is generally negative (bearish) for the GBP
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURGBP</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">GBPUSD</a></td> 
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>14:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>EUR</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>CPI (YoY) (Aug)</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.20%</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>2.60%</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURJPY</a></td> 
+</tr>
+<tr height=140 style='height:105.0pt'>
+  <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep</td>
+  <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+  <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>14:30</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+  <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Crude Oil Inventories</td>
+  <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+  <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.833M</td>
+  <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
+If the increase in crude is less than expected it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected. 
+
+<br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">UKOILX4</a> </td> 
+</tr>
+<tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>FOMC Economic Projections</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  Markets will closely watch the Federal Reserve's interest rate decision, the central bank's projections for growth, inflation, and unemployment levels for the upcoming year, as well as the Fed dot plot and the subsequent press conference by Federal Reserve Chairman Jerome Powell.
+  
+  The US Consumer Price Index data for August met expectations, with the headline at 2.5% and the core 3.2%. According to Bloomberg, markets anticipate the Federal Reserve will reduce interest rates by 25 basis points at its September meeting. 
+  
+  Investors will play close attention to Chairman Powell's press conference in particular, following the rate decision to gauge the Federal Reserve's assessment of the US economy's performance and whether it is on path towards recession. The conference will also provide insights into the pace of interest rate cuts, as reflected in the Fed dot plot, and whether there may be an increase in rate cuts before the year's end. Any indication of a faster pace could negatively impact the US dollar and positively influence precious metals prices, such as silver.
+  
+  <br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">XAGUSD</a></td> 
+  </tr>
+<tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>FOMC Statement</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  Markets will closely watch the Federal Reserve's interest rate decision, the central bank's projections for growth, inflation, and unemployment levels for the upcoming year, as well as the Fed dot plot and the subsequent press conference by Federal Reserve Chairman Jerome Powell.
+  
+  The US Consumer Price Index data for August met expectations, with the headline at 2.5% and the core 3.2%. According to Bloomberg, markets anticipate the Federal Reserve will reduce interest rates by 25 basis points at its September meeting. 
+  
+  Investors will play close attention to Chairman Powell's press conference in particular, following the rate decision to gauge the Federal Reserve's assessment of the US economy's performance and whether it is on path towards recession. The conference will also provide insights into the pace of interest rate cuts, as reflected in the Fed dot plot, and whether there may be an increase in rate cuts before the year's end. Any indication of a faster pace could negatively impact the US dollar and positively influence precious metals prices, such as silver.
+  
+  <br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">XAGUSD</a></td> 
+  </tr>
+<tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>18-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Wed</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Interest Rate Decision</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>5.25%</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>5.50%</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  Markets will closely watch the Federal Reserve's interest rate decision, the central bank's projections for growth, inflation, and unemployment levels for the upcoming year, as well as the Fed dot plot and the subsequent press conference by Federal Reserve Chairman Jerome Powell.
+  
+  The US Consumer Price Index data for August met expectations, with the headline at 2.5% and the core 3.2%. According to Bloomberg, markets anticipate the Federal Reserve will reduce interest rates by 25 basis points at its September meeting. 
+  
+  Investors will play close attention to Chairman Powell's press conference in particular, following the rate decision to gauge the Federal Reserve's assessment of the US economy's performance and whether it is on path towards recession. The conference will also provide insights into the pace of interest rate cuts, as reflected in the Fed dot plot, and whether there may be an increase in rate cuts before the year's end. Any indication of a faster pace could negatively impact the US dollar and positively influence precious metals prices, such as silver.
+  
+  <br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">XAGUSD</a></td> 
+  </tr>
+<tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>19-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>0:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>FOMC Press Conference</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  Markets will closely watch the Federal Reserve's interest rate decision, the central bank's projections for growth, inflation, and unemployment levels for the upcoming year, as well as the Fed dot plot and the subsequent press conference by Federal Reserve Chairman Jerome Powell.
+  
+  The US Consumer Price Index data for August met expectations, with the headline at 2.5% and the core 3.2%. According to Bloomberg, markets anticipate the Federal Reserve will reduce interest rates by 25 basis points at its September meeting. 
+  
+  Investors will play close attention to Chairman Powell's press conference in particular, following the rate decision to gauge the Federal Reserve's assessment of the US economy's performance and whether it is on path towards recession. The conference will also provide insights into the pace of interest rate cuts, as reflected in the Fed dot plot, and whether there may be an increase in rate cuts before the year's end. Any indication of a faster pace could negatively impact the US dollar and positively influence precious metals prices, such as silver.
+  
+  <br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">EURUSD</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a> | <a href="https://drive.google.com/file/d/1vWs2W88PPaiUZwQHYsgbxihF2_BIw5eq/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">XAGUSD</a></td> 
+  </tr>
+<tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>19-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>16:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>GBP</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>BoE Interest Rate Decision (Sep)</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>5.00%</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>5.00%</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  Before the end of the week, traders will also focus on the Bank of England's interest rate decision. According to Bloomberg, the central bank is expected to maintain the current rate at 5.00%. Investors will pay close attention to the MPC voting split between those favouring unchanged rates and those advocating for cuts to predict the BoE's next step. Interest rates in the last meeting were notably reduced by 25 basis points with a narrow majority of five votes to four. 
+  
+  Markets will also examine the minutes from the Bank of England's Monetary Policy Committee meeting for insights into the committee's views on the British economy and future monetary policy direction.
+  
+  <br><br><a href="https://drive.google.com/file/d/11JIXOqZz78MgSHyC4OCVAje4CBR2vl-7/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">Historical impact on assets</a></td> 
+  </tr>
+  <tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>19-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Initial Jobless Claims</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>232K</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>230K</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  A higher than expected reading should be taken as negative/bearish for the USD, while a lower than expected reading should be taken as positive/bullish for the USD.
+  
+  <br><br><a href="https://drive.google.com/file/d/11JIXOqZz78MgSHyC4OCVAje4CBR2vl-7/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">Historical impact on assets</a></td> 
+  </tr>
+  <tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>19-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>18:00</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Philadelphia Fed Manufacturing Index (Sep)</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-0.6</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>-7.0</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+        Lower-than-expected manufacturing index may indicate economic slowdown, influencing Fed policy and potentially weakening USD.
+        <br><br><a href="https://drive.google.com/file/d/11JIXOqZz78MgSHyC4OCVAje4CBR2vl-7/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">Historical impact on assets</a></td> 
+    </tr>
+  <tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>19-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>19:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Existing Home Sales (Aug)</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>3.89M</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>3.95M</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  The housing market data will be closely watched as an indicator of consumer confidence and economic stability. A strong report could ease concerns about a slowing economy, while weaker-than-expected numbers could add to recession fears and support the case for rate cuts.
+  
+  <br><br><a href="https://drive.google.com/file/d/11JIXOqZz78MgSHyC4OCVAje4CBR2vl-7/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">Historical impact on assets</a></td> 
+  
+  </tr>
+  <tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>20-Sep</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Fri</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>8:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>JPY</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>BoJ Interest Rate Decision</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.25%</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>0.25%</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  As per Bloomberg, BoJ chief Kazuo Ueda is bound to get a lot of attention after the board sets policy on Friday.
+  
+  While economists are unanimous in predicting no change to borrowing costs, how the governor characterizes the trajectory could jolt Japan's currency, which has already spooked yen-carry traders by outperforming its peers so far this month. 
+  
+  <br><br>Historical impact on assets: <a href="https://drive.google.com/file/d/1rtj2Ee1eop9GKff-bCDjKJnjMT6sfQNi/view?usp=share_link" style="color: rgb(99, 99, 225); text-decoration: underline;" target="_blank">USDJPY</a></td> 
+
+  
+  </tr>
+  <tr height=140 style='height:105.0pt'>
+    <td height=140 class=xl67 style='height:105.0pt;border-top:none; padding-left: 10px;'>07-Nov</td>
+    <td class=xl68 style='border-top:none;border-left:none; padding-left: 10px;'>Thu</td>
+    <td class=xl69 style='border-top:none;border-left:none; padding-left: 10px;'>23:30</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>USD</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>3</td>
+    <td class=xl70 style='border-top:none;border-left:none; padding-left: 10px;'>Fed Interest Rate Decision</td>
+    <td class=xl76 style='border-top:none;border-left:none; padding-left: 10px;'>&nbsp;</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>4.74%</td>
+    <td class=xl74 style='border-top:none;border-left:none; padding-left: 10px;'>5.25%</td>
+    <td class=xl77 width=300 style='border-top:none;border-left:none;width:350pt; padding-left: 10px;'>
+  A continued easing of inflation and robust labour market could give the Fed more room to implement rate cuts without stoking inflation fears, supporting the case for a soft landing. </td>
+  </tr>
+  </table>
+  <p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 15th September 2024, 9 PM.</p>
+  <p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="font-weight: normal; text-decoration: none;">https://quantwater.tech/resources</a></p>
+  </body>
+  </html>
