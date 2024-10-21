@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .event-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 10px;
+        }
+        .event-date {
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        .event-details {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px 10px;
+            margin-bottom: 15px;
+        }
+        .event-label {
+            font-weight: bold;
+            color: #aaa;
+        }
+        .event-value {
+            color: #e0e0e0;
+        }
+        .event-notes {
+            font-size: 14px;
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+        .historical-impact {
+            font-size: 14px;
+            color: #6495ED;
+        }
+        .historical-impact a {
+            color: #fff;
+            text-decoration: none;
+            background-color: #4a90e2;
+            padding: 2px 5px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            margin-right: 5px;
+        }
+        .historical-impact a:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-grid">
+
+        <div class="event-card">
+            <div class="event-title">OPEC Monthly Report</div>
+            <div class="event-date">14 Oct 2024 | Mon | 16:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">2</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">Investors will follow the release of OPEC's monthly report this week.
+                    <br><br>This essential report explores the major factors affecting the global oil market, providing an in-depth analysis of key developments influencing global oil demand supply, and price stability for the current and upcoming year.
+                    <br><br>It's worth noting that oil prices corrected higher by the end of September and then rallied since the beginning of October - recouping some of its previous losses due to renewed geopolitical tensions in the Middle East. However, in the absence of further escalations, prices may fall once more with the return of Libyan oil to the market and the lack of signs of increased Chinese oil demand.
+                    <br><br>If the OPEC report suggests a potential rise in demand, it could lend support to oil prices, which struggle to remain above the $80 per barrel threshold.
+                    <br><br>   
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1zNE7HgI7ufD7Uer6vbV3XCgBcQVdg0l1/view?usp=share_link" target="_blank">USOILRoll</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">CPI (YoY) (Q3)</div>
+            <div class="event-date">16 Oct 2024 | Wed | 03:15 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">NZD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">2</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">2.30%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">3.30%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">The New Zealand Consumer Price Index dropped from 4% in Q1 of 2024 to 3.3% in Q2 of the same year, prompting the Reserve Bank of New Zealand to lower interest rates by 50 basis points at its last meeting (bringing rates down from 5.25% to 4.75%)
+                    <br><br>With inflation likely to continue falling, Bloomberg reports that markets have already priced in a 50 basis point rate cut by the New Zealand Central Bank at its November meeting, with an additional 50 basis point cut expected in February next year, with a probability of up to 90%.
+                    <br><br>If inflation rises or remains stable around 3%, the Reserve Bank of New Zealand may slow the pace of rate cuts, which could strengthen the New Zealand dollar against other major currencies.
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">NZDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">CPI (YoY) (Sep)</div>
+            <div class="event-date">16 Oct 2024 | Wed | 11:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">GBP</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">1.90%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">2.20%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">In the UK, YoY CPI held steady in August at 2.2%, while core CPI (excluding food and energy) increased from 3.3% in July to 3.6% in August. As a result, markets expect the Bank of England to cut rates, but more cautiously than its counterparts. Bloomberg suggests that a 25-basis point cut is priced in with over 90% certainity for the November meeting, but only 50% certainity for December. If core inflation remains stable or proves difficult to lower in the September report, investors may delay pricing in a full December rate cut until further data is available, which could strengthen the pound against currencies like the New Zealand dollar.
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">GBPJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">CPI (YoY) (Sep)</div>
+            <div class="event-date">17 Oct 2024 | Thu | 14:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">1.80%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">2.20%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
+
+                    <br><br>A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">EURJPY</a>
+                </span>
+            </div>
+        </div>
+        <div class="event-card">
+            <div class="event-title">Deposit Facility Rate (Oct)</div>
+            <div class="event-date">17 Oct 2024 | Thu | 17:45 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">3.25%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">3.50%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">EURJPY</a>
+                </span>
+            </div>
+        </div>
+        <div class="event-card">
+            <div class="event-title">ECB Interest Rate Decision (Oct)</div>
+            <div class="event-date">17 Oct 2024 | Thu | 17:45 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">3.40%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">3.65%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">Bloomberg anticipates the ECB will lower interest rates by 25 basis points at its upcoming meeting, driven by a significant drop in overall inflation, which has reached its lowest level since April 2021. The consumer price index fell from 2.2% in August to 1.8% in September. 
+
+                    <br><br>Bloomberg also reports that markets have priced in a 25-basis point rate cut at the November meeting with about 95% certainity and similar cut in December with over 100% certainty. Any signal from the ECM president suggesting the continuation of this pace into next year could lead investors to expect further cuts, potentially weakening the euro while boosting European stocks like ESTOX
+                    
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">EURJPY</a>
+                </span>
+            </div>
+        </div>
+
+
+        <div class="event-card">
+            <div class="event-title">Core Retail Sales (MoM) (Sep)</div>
+            <div class="event-date">17 Oct 2024 | Thu | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.10%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.10%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">Core Retail Sales measures the change in the total value of sales at the retail level in the U.S., excluding automobiles. It is an important indicator of consumer spending which accounts for a large percentage of US GDP.
+
+                    <br><br>A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+                    
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">Initial Jobless Claims</div>
+            <div class="event-date">17 Oct 2024 | Thu | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">258K</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
+
+                    <br><br>A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
+                                        
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">Philadelphia Fed Manufacturing Index (Oct)</div>
+            <div class="event-date">17 Oct 2024 | Thu | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">3.00</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">1.70</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">The Philadelphia Federal Reserve Manufacturing Index measures the relative level of business conditions amongst manufacturers in the Federal reserve district. A level above zero on the index indicates improving conditions; below indicates worsening conditions. The data is compiled from a survey of about 250 manufacturers in the Philadelphia Federal Reserve district.
+
+                    <br><br>A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.                    
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">Retail Sales (MoM) (Sep)</div>
+            <div class="event-date">17 Oct 2024 | Thu | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.30%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.10%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">Retail Sales gauges the change in the aggregate value of sales at the retail level across the country. It is an important indicator of consumer spending accounting for the majority of overall economic activity.
+
+                    <br><br>A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.                    
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">ECB Press Conference</div>
+            <div class="event-date">17 Oct 2024 | Thu | 18:15 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value"></span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value"></span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">The European Central Bank (ECB) press conference is held monthly, about 45 minutes after the Minimum Bid Rate is announced. The conference is approximately an hour long and has two parts. Firstly, a prepared statement is read, then the conference is open to press questions. The press conference examines the factors which affected the ECB's interest rate decision and deals with the overall economic outlook and inflation. Most importantly, it provides clues regarding future monetary policy. High levels of volatility can frequently be observed during the press conference as press questions lead to unscripted answers.
+                    <br><br>
+                    </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">EURJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <div class="event-card">
+            <div class="event-title">Crude Oil Inventories</div>
+            <div class="event-date">17 Oct 2024 | Thu | 20:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">5.180M</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.
+
+                    <br><br>If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.
+                    If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.
+                <br><br>
+                </span>
+            <span class="event-label">Historical Impact:</span>
+            <span class="event-value historical-impact">
+                <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">USOILX4</a>
+            </span>
+        </div>
+    </div>
+
+    <div class="event-card">
+        <div class="event-title">GDP (YoY) (Q3)</div>
+        <div class="event-date">18 Oct 2024 | Fri | 7:30 IST</div>
+        <div class="event-details">
+            <span class="event-label">Currency:</span>
+            <span class="event-value">CNY</span>
+            <span class="event-label">Importance:</span>
+            <span class="event-value">3</span>
+            <span class="event-label">Forecast:</span>
+            <span class="event-value">4.60%</span>
+            <span class="event-label">Previous:</span>
+            <span class="event-value">4.70%</span>
+            <span class="event-label">Notes:</span>
+            <span class="event-value">Gross Domestic Product (GDP) gauges the inflation-adjusted value of all goods and services produced within the economy. It is the most comprehensive measure of economic activity and an important indicator of economic health.
+
+                <br><br>A reading that is stronger than forecast is generally supportive (bullish) for the CNY, while a weaker than forecast reading is generally negative (bearish) for the CNY.
+            <br><br>
+            </span>
+        <span class="event-label">Historical Impact:</span>
+        <span class="event-value historical-impact">
+            <a href="https://drive.google.com/file/d/1pjFwvTcOsI9jYppZfhPbAyxYTnOo8J1K/view?usp=share_link" target="_blank">USOILRoll</a>
+        </span>
+    </div>
+</div>
+
+<div class="event-card">
+    <div class="event-title">Fed Interest Rate Decision</div>
+    <div class="event-date">07 Nov 2024 | Thu | 23:30 IST</div>
+    <div class="event-details">
+        <span class="event-label">Currency:</span>
+        <span class="event-value">USD</span>
+        <span class="event-label">Importance:</span>
+        <span class="event-value">3</span>
+        <span class="event-label">Forecast:</span>
+        <span class="event-value">4.66%</span>
+        <span class="event-label">Previous:</span>
+        <span class="event-value">4.88%</span>
+        <span class="event-label">Notes:</span>
+        <span class="event-value">A continued easing of inflation and robust labour market could give the Fed more room to implement rate cuts without stoking inflation fears, supporting the case for a soft landing.</span>
+</div>
+</div>
+
+    </div>
+    <br><br>
+
+    <p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 13th October 2024, 8PM.</p>
+    <p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="color: #4a90e2;">https://quantwater.tech/resources</a></p>
+</body>
+</html>
+
