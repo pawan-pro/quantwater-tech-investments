@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Economic Calendar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #1e1e1e;
+            color: #e0e0e0;
+            padding: 20px;
+            line-height: 1.6;
+        }
+        .calendar-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+        .event-card {
+            background-color: #2a2a2a;
+            border: 1px solid #444;
+            border-radius: 8px;
+            padding: 15px;
+        }
+        .event-title {
+            font-size: 20px;
+            font-weight: bold;
+            color: #6495ED;
+            margin-bottom: 10px;
+        }
+        .event-date {
+            font-size: 16px;
+            color: #888;
+            margin-bottom: 15px;
+        }
+        .event-details {
+            display: grid;
+            grid-template-columns: auto 1fr;
+            gap: 5px 10px;
+            margin-bottom: 15px;
+        }
+        .event-label {
+            font-weight: bold;
+            color: #aaa;
+        }
+        .event-value {
+            color: #e0e0e0;
+        }
+        .event-notes {
+            font-size: 14px;
+            color: #bbb;
+            margin-bottom: 15px;
+        }
+        .historical-impact {
+            font-size: 14px;
+            color: #6495ED;
+        }
+        .historical-impact a {
+            color: #fff;
+            text-decoration: none;
+            background-color: #4a90e2;
+            padding: 2px 5px;
+            border-radius: 3px;
+            transition: background-color 0.3s;
+            margin-right: 5px;
+        }
+        .historical-impact a:hover {
+            background-color: #357ae8;
+        }
+    </style>
+</head>
+<body>
+    <div class="calendar-grid">
+        
+        <!-- Event 1 -->
+        <div class="event-card">
+            <div class="event-title">CB Consumer Confidence (Oct)</div>
+            <div class="event-date">29 Oct 2024 | Tue | 19:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">99.2</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">98.7</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Conference Board (CB) Consumer Confidence measures the level of confidence consumers have in the economy. When consumers are optimistic, they tend to spend more which increases consumption and overall economic growth.<br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 2 -->
+        <div class="event-card">
+            <div class="event-title">JOLTs Job Openings (Sep)</div>
+            <div class="event-date">29 Oct 2024 | Tue | 19:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">7.920M</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">8.040M</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    A survey done by the US Bureau of Labor Statistics to help measure job vacancies. It collects data from employers about their businesses' employment, job openings, recruitment, hires, and separations.<br>
+                    JOLTS defines Job Openings as all positions that are open (not filled) on the last business day of the month. A job is "open" only if it meets all three of the following conditions:<br>
+                    1. A specific position exists and there is work available for that position.<br>
+                    2. The job could start within 30 days, whether or not the establishment finds a suitable candidate during that time.<br>
+                    3. There is active recruiting for workers from outside the establishment location that has the opening.<br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.<br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 3 -->
+        <div class="event-card">
+            <div class="event-title">CPI (YoY) (Q3) (AUD)</div>
+            <div class="event-date">30 Oct 2024 | Wed | 6:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">AUD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">2</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">2.30%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">3.80%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Investors are closely monitoring the release of Australia's CPI data for Q3.<br><br>
+                    During the 2nd quarter, Australian inflation rose to 3.8%, leading markets to dismiss the likelihood the Reserve Bank of Australia would cut interest rates in Q3. As a result, the Australian dollar strengthened, gaining around 2.6% against the euro and 3.6% against the US dollar.<br><br>
+                    Bloomberg reports that inflation is projected to drop to 3.5% in Q3, which remains above the 2% target. A larger-than-expected decline could prompt Australian policymakers to consider interest rate cuts, potentially weakening the Australian dollar against other major currencies.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">EURAUD</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">AUDUSD</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">AUDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 4 -->
+        <div class="event-card">
+            <div class="event-title">German GDP (QoQ) (Q3) P</div>
+            <div class="event-date">30 Oct 2024 | Wed | 14:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">-0.10%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">-0.10%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Gross Domestic Product (GDP) is the broadest measure of economic activity and is a key indicator of economic health. The quarterly percent changes in GDP show the growth rate of the economy as a whole.<br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">EURJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 5 -->
+        <div class="event-card">
+            <div class="event-title">GDP (YoY) (EUR)</div>
+            <div class="event-date">30 Oct 2024 | Wed | 15:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.80%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.60%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Traders await the preliminary Q3 European GDP data on the same day. The European economy grew by 0.6% in Q2. 
+                    If growth falls short of this figure, it could reinforce market expectations that the European Central Bank may need to stimulate the economy further through rate cuts, potentially weighing on the euro's value against currencues like the Australian dollar.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">EURJPY</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">EURAUD</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">EURUSD</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 6 -->
+        <div class="event-card">
+            <div class="event-title">Autumn Forecast Statement</div>
+            <div class="event-date">30 Oct 2024 | Wed | 15:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">GBP</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Autumn Statement of the British Government, also known as the "mini-budget", is one of the two statements HM Treasury makes each year to Parliament upon publication of economic forecasts. It usually involves speeches in the House of Commons by the Chancellor of the Exchequer.                    <br><br>
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">GBPJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 7 -->
+        <div class="event-card">
+            <div class="event-title">ADP Nonfarm Employment Change (Oct)</div>
+            <div class="event-date">30 Oct 2024 | Wed | 17:45 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">101K</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">143K</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    ADP is performs payroll services for its clients. The ADP National Employment Report is a measure of the monthly change in non-farm, private employment, based on the payroll data of approximately 400,000 U.S. business clients. The release, two days ahead of government data, is used as a predictor of the government's Labour Market Report.<br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 8 -->
+        <div class="event-card">
+            <div class="event-title">GDP (QoQ) (Q3) P</div>
+            <div class="event-date">30 Oct 2024 | Wed | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">3.00%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">3.00%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Gross Domestic Product (GDP) measures the annualised change in the inflation-adjusted value of all goods and services produced by the economy. It is the broadest measure of economic activity and the primary indicator of the economy's health.<br><br>
+
+                    A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 9 -->
+        <div class="event-card">
+            <div class="event-title">German CPI (MoM) (Oct) P</div>
+            <div class="event-date">30 Oct 2024 | Wed | 18:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.20%</span>
+                <span class="event-label">Actual:</span>
+                <span class="event-value">0.00%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Consumer Price Index (CPI) measures the change in the prices of goods and services from the perspective of the consumer. As Germany has the largest output of any country in the euro-zone, the European Central bank pays very close attention to this figure in its role of maintaining price stability.<br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">EURJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 10 -->
+        <div class="event-card">
+            <div class="event-title">Crude Oil Inventories</div>
+            <div class="event-date">30 Oct 2024 | Wed | 20:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value"></span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">5.474M</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Energy Information Administration's (EIA) Crude Oil Inventories measures the weekly change in the number of barrels of commercial crude oil held by US firms. The level of inventories influences the price of petroleum products, which can have an impact on inflation.<br><br>
+                    If the increase in crude inventories is more than expected, it implies weaker demand and is bearish for crude prices. The same can be said if a decline in inventories is less than expected.<br><br>
+                    If the increase in crude is less than expected, it implies greater demand and is bullish for crude prices. The same can be said if a decline in inventories is more than expected.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USOILX4</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 12 -->
+        <div class="event-card">
+            <div class="event-title">Manufacturing PMI (Oct) (CNY)</div>
+            <div class="event-date">31 Oct 2024 | Thu | 7:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">CNY</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">50.0</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">49.8</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    China Manufacturing Purchasing Managers Index (PMI) provides an early indication each month of economic activities in the Chinese manufacturing sector. It is compiled by China Federation of Logistics & Purchasing (CFLP) and China Logistics Information Centre (CLIC), based on data collected by the National Bureau of Statistics (NBS).Li & Fung Research Centre is responsible for drafting and disseminating the English PMI report. Every month questionnaires are sent to over 700 manufacturing enterprises all over China. The data presented here is compiled from the enterprises responses about their purchasing activities and supply situations. The PMI should be compared to other economic data sources when used in decision-making.<br><br>
+
+                    A reading that is stronger than forecast is generally supportive (bullish) for the CNY , while a weaker than forecast reading is generally negative (bearish) for the CNY.
+
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDCNY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 13 -->
+        <div class="event-card">
+            <div class="event-title">BoJ Interest Rate Decision</div>
+            <div class="event-date">31 Oct 2024 | Thu | 8:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">JPY</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.25%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.25%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Bank of Japan (BOJ) policy board publishes its decision about where to set the target overnight rate. As short term interest rates are an important determinant of currency valuation, traders watch interest rate changes closely. 
+                    <br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the JPY, while a weaker than forecast reading is generally negative (bearish) for the JPY.                    <br><br>
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 14 -->
+        <div class="event-card">
+            <div class="event-title">CPI (YoY) (Oct) P (EUR)</div>
+            <div class="event-date">31 Oct 2024 | Thu | 15:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">EUR</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">1.90%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">1.70%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Consumer Price Index (CPI) measures the change in the prices of goods and services contained in a basket of consumer items. The Central bank pays very close attention to this figure in its role of maintaining price stability.
+                    <br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the EUR, while a weaker than forecast reading is generally negative (bearish) for the EUR.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">EURJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 15 -->
+        <div class="event-card">
+            <div class="event-title">Core PCE Price Index (YoY) (Sep)</div>
+            <div class="event-date">31 Oct 2024 | Thu | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value"></span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">2.70%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Core PCE price Index is the less volatile measure of the PCE price index which excludes the more volatile and seasonal food and energy prices. The impact on the currency may go both ways, a rise in inflation may lead to a rise in interest rates and a rise in local currency, on the other hand, during recession, a rise in inflation may lead to a deepened recession and therefore a fall in local currency.                    <br><br>
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 16 -->
+        <div class="event-card">
+            <div class="event-title">Core PCE Price Index (MoM) (Sep)</div>
+            <div class="event-date">31 Oct 2024 | Thu | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.30%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.10%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Core Personal Consumption Expenditure (PCE) Price Index measures the changes in the price of goods and services purchased by consumers for the purpose of consumption, excluding food and energy. Unlike the fixed-weight CPI, PCE is chain-weighted and thus adjusts to changing consumer behaviour. Core PCE is the Fed's preferred inflation measure and thus receives greater attention.
+                    A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 17 -->
+        <div class="event-card">
+            <div class="event-title">Initial Jobless Claims</div>
+            <div class="event-date">31 Oct 2024 | Thu | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">231K</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">227K</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Initial Jobless Claims measures the number of people who filed for unemployment insurance for the first time during the past week. This is the most timely U.S. economic data, but the market impact varies from week to week.
+                    <br><br>
+                    A reading that is higher than forecast is generally negative (bearish) for the USD, while a lower than forecast reading is generally supportive (bullish) for the USD.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 18 -->
+        <div class="event-card">
+            <div class="event-title">Chicago PMI (Oct)</div>
+            <div class="event-date">31 Oct 2024 | Thu | 19:15 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">47.1</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">46.6</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Chicago Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms around the Chicago area. A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. The Chicago PMI can be of some assistance in forecasting the ISM manufacturing PMI.
+
+                    <br><br>
+
+                    A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+                    
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 19 -->
+        <div class="event-card">
+            <div class="event-title">Apple's Earnings Report</div>
+            <div class="event-date">01 Nov 2024 | Fri | 2:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">1.59</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">1.40</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The markets will closely watch the release of Apple's Q4 earnings report.
+
+                    <br><br>
+                    The report may highlight Apple's initiative to incorporate artificial intelligence into its devices, particularly the iPhones launched last September, as well as developers' feedback and the potential of this initiative.
+                    
+                    <br><br>
+                    Apple's previous quarter earnings per share surpassed expectations of 1.34, reaching 1.40 with a positive growth of 0.14%. For the current quarter, Bloomberg forecasts EPS of 1.59 and quarterly revenues of $94.33 billion.
+                    
+                    <br><br>
+                    Any figures below expectations could negatively impact Apple's stock, which may affect the US500 index, where Apple is a key component, and vice verse.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">AAPL</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">US500</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 20 -->
+        <div class="event-card">
+            <div class="event-title">Average Hourly Earnings (MoM) (Oct)</div>
+            <div class="event-date">01 Nov 2024 | Fri | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">0.30%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">0.40%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Before the week concludes, traders will wait for the release oftthe US jobs report for October.
+
+                    <br><br>
+                    Bloomberg forecasts the US economy may add 135,000 jobs in October, a decrease from September's unexpectedly strong report, which showed the addition of 254,000 jobs and a drop in the unemployment rate to 4.1%
+                    
+                    <br><br>
+                    Stronger-than-expected figures could bolster the Federal Reserve's confidence in the resilience of the US economy, potentially slowing the pace of interest rate cuts. This would likely support the US dollar while negatively impacting dollar-related commodities like gold, which recently reached record highs, surpassing $2,700 per ounce.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">XAUUSD</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 21 -->
+        <div class="event-card">
+            <div class="event-title">Nonfarm Payrolls (Oct)</div>
+            <div class="event-date">01 Nov 2024 | Fri | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">111K</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">254K</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Before the week concludes, traders will wait for the release oftthe US jobs report for October.
+
+                    <br><br>
+                    Bloomberg forecasts the US economy may add 135,000 jobs in October, a decrease from September's unexpectedly strong report, which showed the addition of 254,000 jobs and a drop in the unemployment rate to 4.1%
+                    
+                    <br><br>
+                    Stronger-than-expected figures could bolster the Federal Reserve's confidence in the resilience of the US economy, potentially slowing the pace of interest rate cuts. This would likely support the US dollar while negatively impacting dollar-related commodities like gold, which recently reached record highs, surpassing $2,700 per ounce.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">XAUUSD</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 22 -->
+        <div class="event-card">
+            <div class="event-title">Unemployment Rate (Oct)</div>
+            <div class="event-date">01 Nov 2024 | Fri | 18:00 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">4.10%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">4.10%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    Before the week concludes, traders will wait for the release oftthe US jobs report for October.
+
+                    <br><br>
+                    Bloomberg forecasts the US economy may add 135,000 jobs in October, a decrease from September's unexpectedly strong report, which showed the addition of 254,000 jobs and a drop in the unemployment rate to 4.1%
+                    
+                    <br><br>
+                    Stronger-than-expected figures could bolster the Federal Reserve's confidence in the resilience of the US economy, potentially slowing the pace of interest rate cuts. This would likely support the US dollar while negatively impacting dollar-related commodities like gold, which recently reached record highs, surpassing $2,700 per ounce.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a> |
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">XAUUSD</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 23 -->
+        <div class="event-card">
+            <div class="event-title">ISM Manufacturing PMI (Oct)</div>
+            <div class="event-date">01 Nov 2024 | Fri | 19:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">47.5</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">47.2</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies across the United States. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), a diffusion index is calculated by adding the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted.
+
+                    <br><br>
+                    The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with differing weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%.
+                    
+                    <br><br>
+                    A reading that is stronger than forecast is generally supportive (bullish) for the USD, while a weaker than forecast reading is generally negative (bearish) for the USD.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 24 -->
+        <div class="event-card">
+            <div class="event-title">ISM Manufacturing Prices (Oct)</div>
+            <div class="event-date">01 Nov 2024 | Fri | 19:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">48.9</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">48.3</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Institute of Supply Management (ISM) Manufacturing Purchasing Managers Index (PMI) Report on Business is based on data compiled from monthly replies to questions asked of purchasing and supply executives in over 400 industrial companies. For each of the indicators measured (New Orders, Backlog of Orders, New Export Orders, Imports, Production, Supplier Deliveries, Inventories, Customers Inventories, Employment, and Prices), this report shows the percentage reporting each response, the net difference between the number of responses in the positive economic direction and the negative economic direction and the diffusion index. Responses are raw data and are never changed.
+
+                    <br><br>
+                    The diffusion index includes the percent of positive responses plus one-half of those responding the same (considered positive). The resulting single index number is then seasonally adjusted to allow for the effects of repetitive intra-year variations resulting primarily from normal differences in weather conditions, various institutional arrangements, and differences attributable to non-moveable holidays. All seasonal adjustment factors are supplied by the U.S. Department of Commerce and are subject annually to relatively minor changes when conditions warrant them.
+
+                    <br><br>
+                    The PMI is a composite index based on the seasonally adjusted diffusion indices for five of the indicators with varying weights: New Orders --30% Production --25% Employment --20% Supplier Deliveries --15% and Inventories -- 10%.
+
+                    <br><br>
+                    The Prices Paid subcategory is a diffusion index calculated by adding the percent of responses indicating they paid more for inputs plus one-half of those responding that they paid the same for inputs. The resulting single index number is then seasonally adjusted.
+
+                    <br><br>
+                    The Prices Paid diffusion index is one of a number of indicators pointing to the degree of inflationary pressures in the economy.
+
+                    <br><br>
+                    A higher than expected reading should be taken as positive/bullish for the USD, while a lower than expected reading should be taken as negative/bearish for the USD.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Event 11: Manufacturing PMI (Oct) -->
+        <div class="event-card">
+            <div class="event-title">Manufacturing PMI (Oct)</div>
+            <div class="event-date">01 Nov 2024 | Fri | 20:15 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">47.9</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">47.3</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    The Manufacturing Purchasing Managers' Index (PMI) is a diffusion index incorporating survey results provided by manufacturing firms throughout the country. 
+                    <br><br>
+                    A reading above fifty suggests the manufacturing sector is expanding, while a reading below fifty suggests the manufacturing sector is in contraction. Policymakers and traders watch these surveys closely as purchasing managers usually have early access to data about their company’s performance, rather than waiting for the hard data to emerge. While manufacturing accounts for a far smaller percentage of economic output than services, it is far more cyclical and is therefore a useful indicator of where in the economic cycle the economy is currently situated. A reading that is stronger than forecast is generally supportive (bullish) for the USD while a weaker than forecast reading is generally negative (bearish) for the USD.
+                    <br><br>
+                </span>
+                <span class="event-label">Historical Impact:</span>
+                <span class="event-value historical-impact">
+                    <a href="https://drive.google.com/file/d/1tGRTP31N2_k-ABSRk1ZXpW772f-X_YWH/view?usp=share_link">USDJPY</a>
+                </span>
+            </div>
+        </div>
+
+        <!-- Final Event: Fed Interest Rate Decision -->
+        <div class="event-card">
+            <div class="event-title">Fed Interest Rate Decision</div>
+            <div class="event-date">07 Nov 2024 | Thu | 23:30 IST</div>
+            <div class="event-details">
+                <span class="event-label">Currency:</span>
+                <span class="event-value">USD</span>
+                <span class="event-label">Importance:</span>
+                <span class="event-value">3</span>
+                <span class="event-label">Forecast:</span>
+                <span class="event-value">4.64%</span>
+                <span class="event-label">Previous:</span>
+                <span class="event-value">4.88%</span>
+                <span class="event-label">Notes:</span>
+                <span class="event-value">
+                    A continued easing of inflation and a robust labour market could give the Fed more room to implement rate cuts without stoking inflation fears, supporting the case for a soft landing.
+                </span>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+    <p>Source: Bloomberg, ADSS, News Articles, Company Research. Notes as of 28th October 2024, 9 AM.</p>
+    <p>For historical data, please visit: <a href="https://quantwater.tech/resources" style="color: #4a90e2;">https://quantwater.tech/resources</a></p>
+</body>
+</html>
