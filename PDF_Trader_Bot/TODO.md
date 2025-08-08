@@ -29,9 +29,9 @@
 -   [x] Implement core trading logic (SL/TP based on Alternative's entry)
 -   [x] Implement **Expectancy Filter** to validate trades based on RRR
 -   [x] Implement **Fixed Percentage Risk** for position sizing
--   [X] Implement basic trade execution using the `CTrade` library
+-   [x] Implement basic trade execution using the `CTrade` library
         [x] Some trades are not being placed due to invalid prices 
--   [ ] Implement logic to avoid duplicate trades and close old trades on new signal arrival
+-   [x] Implement logic to avoid duplicate trades and close old trades on new signal arrival
 
 ---
 
@@ -56,59 +56,49 @@
     -   [x] **Verify Python Script:** Check the script's console output to ensure it downloaded and processed the file without errors.
     -   [x] **Verify CSV Creation:** Check that the `signals.csv` file appears in the `MQL5\Files` directory and its content is correct.
     -   [x] **Verify EA Detection:** Check the EA's "Experts" tab in the MT5 Toolbox to confirm it detected the "New signal file".
-    -   [] **Verify EA Logic:** Check the EA log to confirm:
-        -   [ ] Correct RRR was calculated.
-        -   [ ] The RRR passed the `MinimumAcceptableRRR` filter.
+    -   [x] **Verify EA Logic:** Check the EA log to confirm:
+        -   [x] Correct RRR was calculated.
+        -   [x] The RRR passed the `MinimumAcceptableRRR` filter.
         -   [x] The correct Lot Size was calculated.
-    -   [ ] **Verify Trade Execution:** Check that the trade was opened on the demo account with the **exact Stop Loss and Take Profit levels** calculated by the EA.
+    -   [x] **Verify Trade Execution:** Check that the trade was opened on the demo account with the **exact Stop Loss and Take Profit levels** calculated by the EA.
 
 -   [ ] **Task: Logic Refinement & Hardening**
     -   [ ] Based on testing, consider improving the entry logic. The current version enters at market price; you could modify it to use pending orders (`TRADE_ACTION_PENDING`) for more precise entries.
     -   [ ] Add more detailed logging to a separate log file for easier debugging over time.
     -   [ ] Review the "close on new signal" logic to ensure it behaves as expected across different market conditions.
----------------------------------------------------
 
-    [ ] prioritization
-    [ ] # of trades and SL sizing, if applicable. the SL size is enough to absorb EA impact probably, or technicals align with expected outcome and vice versa. 
-    [ ] continuation of previous day's trade (can be used in priorization) | trend can be utilized to analyze the continuation pattern, taking into consideration the rrr as well
 
 ---
 ### **EA Logic Updates (Based on Performance Analysis - Aug 8, 2025)**
 
 *   **Goal:** Refine the EA's trade execution and management logic to improve robustness, prevent premature stop-outs, and align its behavior with the strategic intent of the signals.
 
--   [ ] **Task 1: Correct the Risk-Reward Ratio (RRR) Calculation**
-    -   **Issue:** The current RRR calculation is inaccurate because it does not account for the market spread.
-    -   **Required Change:** Modify the RRR calculation to be "spread-aware."
-        -   For **Sell Trades**, the risk must be calculated from the **Stop Loss** to the current **Ask Price**.
-        -   For **Buy Trades**, the risk must be calculated from the **Stop Loss** to the current **Bid Price**.
-    -   **Impact:** Ensures the EA only takes trades that meet the RRR criteria based on the *true, executable risk*.
+-   [x] **Task 1: Correct the Risk-Reward Ratio (RRR) Calculation**
+-   [x] **Task 2: Change Signal Expiration to "Session Validity"**
+-   [x] **Task 3: Implement Dynamic (ATR-Based) Entry Tolerance**
+-   [x] **Task 4: Add a Stop Loss "Breathing Room" Check**
+-   [x] **Task 5: Implement Trade Continuation Logic**
 
--   [ ] **Task 2: Change Signal Expiration to "Session Validity"**
-    -   **Issue:** The 60-minute timer is not aligned with the nature of the signals, which are based on persistent trends and levels.
-    -   **Required Change:** Remove the `MaxWaitMinutes` time-based expiration logic. Signals will now only be cleared from the pending list when a new `signals.csv` file is processed.
-    -   **Impact:** Maximizes the opportunity to enter every valid trade for that session.
+-   [ ] **Task 6: Refine Trade Continuation Logic**
+    -   **Issue:** The EA opens a new trade if `PositionModify` fails because the SL/TP levels are identical to the existing ones.
+    -   **Required Change:** After attempting to modify a position, check if the modification failed *and* if the SL/TP levels are the same. If both are true, treat it as a successful continuation and prevent a new trade from opening.
+    -   **Impact:** Prevents duplicate positions when a new signal has the same parameters as an existing trade.
 
--   [ ] **Task 3: Implement Dynamic (ATR-Based) Entry Tolerance**
-    -   **Issue:** The static `EntryTolerancePips` is not adaptive to changing market volatility.
-    -   **Required Change:** Replace the static pip tolerance with a dynamic tolerance based on the Average True Range (ATR).
-        1.  Add a new input parameter, e.g., `input double EntryToleranceATR_Percent = 0.25;`.
-        2.  Before checking the entry condition, calculate the current ATR for the symbol.
-        3.  Calculate the dynamic tolerance in price points: `tolerance = ATR_value * EntryToleranceATR_Percent`.
-    -   **Impact:** The EA will automatically adapt its entry zone to market conditions, improving entry quality.
+-   [ ] **Task 7: Add a Cap to ATR Entry Tolerance**
+    -   **Issue:** The ATR-based tolerance can be excessively large during high volatility, leading to entries far from the intended price.
+    -   **Required Change:** Add a new input parameter, e.g., `input double MaxEntryTolerancePips = 25.0;`. When calculating the entry tolerance, use the *minimum* value between the ATR calculation and the fixed `MaxEntryTolerancePips`.
+    -   **Impact:** Provides the benefits of dynamic tolerance while preventing runaway entries in extreme market conditions.
 
--   [ ] **Task 4: Add a Stop Loss "Breathing Room" Check**
-    -   **Issue:** The EA can enter trades where the entry price is dangerously close to the stop loss, leading to immediate stop-outs due to the spread.
-    -   **Required Change:** Add a final pre-trade safety check in the `ExecuteTradeFromSignal` function.
-        1.  Add a new input parameter, e.g., `input double SpreadMultiplierForStop = 2.0;` (minimum stop distance in multiples of the spread).
-        2.  Before executing the trade, calculate the required minimum distance: `min_stop_distance = spread * SpreadMultiplierForStop`.
-        3.  Check if the distance between the entry price and the stop loss (accounting for spread) is greater than `min_stop_distance`. If not, abort the trade.
-    -   **Impact:** Prevents the EA from taking trades that are tactically unviable due to the current spread, dramatically reducing instant stop-outs.
-
--   [ ] **Task 5: Implement Trade Continuation Logic**
-    -   **Issue:** The EA currently closes existing positions before opening new ones, preventing profitable trades from continuing on subsequent signals in the same direction.
+-   [ ] **Task 8: Implement Broker-Specific Symbol Mapping**
+    -   **Issue:** The Python script extracts generic symbol names (e.g., "US30") from the PDF, but the broker requires specific names (e.g., "US30Roll").
     -   **Required Change:**
-        1.  In `ExecuteTradeFromSignal`, before closing positions, check if a position already exists for the symbol in the *same direction* as the new signal.
-        2.  If a "continuation" is found, do **not** close the existing trade. Instead, use `trade.PositionModify(...)` to update its Stop Loss and Take Profit to the new signal's levels.
-        3.  If no existing trade is found, or if it's in the opposite direction, proceed with the original logic of closing and opening a new trade.
-    -   **Impact:** Allows the EA to systematically ride a trend by adjusting the parameters of an existing trade, rather than closing it prematurely.
+        1.  Create a new file, `symbol_mapping.json`, to store the mapping between PDF names and broker symbols.
+        2.  Update `bot_listener.py` to read this mapping file.
+        3.  When writing to `signals.csv`, the script should now use the mapping to translate the PDF name to the correct, tradable broker symbol.
+    -   **Impact:** Ensures the EA receives the correct symbols to trade, preventing "invalid symbol" errors.
+
+---------------------------------------------------
+
+    [ ] prioritization
+    [ ] # of trades and SL sizing, if applicable. the SL size is enough to absorb EA impact probably, or technicals align with expected outcome and vice versa. 
+    [ ] continuation of previous day's trade (can be used in priorization) | trend can be utilized to analyze the continuation pattern, taking into consideration the rrr as well

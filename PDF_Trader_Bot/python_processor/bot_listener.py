@@ -2,6 +2,7 @@ import os
 import re
 import logging
 import csv
+import json
 from telegram import Update
 from telegram.ext import Application, CommandHandler, MessageHandler, filters, ContextTypes
 import pdfplumber
@@ -9,6 +10,7 @@ import pdfplumber
 # --- Configuration ---
 API_KEY_FILE = 'PDF_Trader_Bot/python_processor/api_key.txt'
 SYMBOLS_FILE = 'PDF_Trader_Bot/python_processor/symbols.txt'
+SYMBOL_MAPPING_FILE = 'PDF_Trader_Bot/python_processor/symbol_mapping.json'
 DATA_DIR = 'data'
 DOWNLOAD_DIR = os.path.join(DATA_DIR, 'downloaded_pdfs')
 
@@ -51,6 +53,24 @@ def load_symbols_to_find(file_path: str) -> list:
     except FileNotFoundError:
         logger.error(f"CRITICAL: The symbol file '{file_path}' was not found.")
         return []
+
+# --- Function to load PDF->Broker symbol mapping ---
+def load_symbol_mapping(file_path: str) -> dict:
+    """Loads a JSON mapping from PDF symbols to broker-specific symbols."""
+    logger.info(f"Loading symbol mapping from {file_path}")
+    try:
+        with open(file_path, 'r', encoding='utf-8') as f:
+            mapping = json.load(f)
+            if not isinstance(mapping, dict):
+                raise ValueError("Mapping file must contain a JSON object (key/value pairs)")
+            logger.info(f"Loaded {len(mapping)} mapping entries.")
+            return mapping
+    except FileNotFoundError:
+        logger.warning(f"Symbol mapping file '{file_path}' not found. Proceeding without mapping.")
+        return {}
+    except Exception as e:
+        logger.error(f"Failed to load symbol mapping: {e}. Proceeding without mapping.")
+        return {}
 
 # --- PDF Text Extraction ---
 def extract_text_from_pdf(pdf_path: str) -> str:
@@ -101,9 +121,9 @@ def parse_all_signals(text: str, symbols: list) -> list:
     return all_signals
 
 # --- Function to write signals to a CSV file ---
-def write_signals_to_csv(signals: list, file_path: str):
+def write_signals_to_csv(signals: list, file_path: str, symbol_mapping: dict):
     """
-    Writes signals to CSV with .sd appended to instrument names.
+    Writes signals to CSV, applying PDF->broker symbol mapping when available.
     """
     if not signals:
         logger.warning("No signals to write to CSV.")
@@ -116,10 +136,14 @@ def write_signals_to_csv(signals: list, file_path: str):
             writer.writeheader()
             for signal in signals:
                 modified_signal = signal.copy()
-                modified_signal["Instrument"] = f"{signal['Instrument']}.sd"
+                pdf_symbol = signal['Instrument']
+                broker_symbol = symbol_mapping.get(pdf_symbol, pdf_symbol)
+                if broker_symbol == pdf_symbol:
+                    logger.warning(f"No mapping found for '{pdf_symbol}'. Using as-is.")
+                modified_signal["Instrument"] = broker_symbol
                 writer.writerow(modified_signal)
         
-        logger.info(f"Successfully wrote {len(signals)} signals with .sd suffixes to {file_path}")
+        logger.info(f"Successfully wrote {len(signals)} signals (with broker symbol mapping) to {file_path}")
         # Setting permissions to ensure the MT5 terminal can read the file
         os.chmod(file_path, 0o777)
         logger.info(f"Set permissions for {file_path} to 0o777")
@@ -130,6 +154,7 @@ def write_signals_to_csv(signals: list, file_path: str):
 async def document_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -> None:
     """Main workflow: load symbols, download PDF, process, and write CSV."""
     symbols_to_find = context.bot_data.get('symbols_to_find')
+    symbol_mapping = context.bot_data.get('symbol_mapping', {})
     if not symbols_to_find:
         await update.message.reply_text("Error: Symbol list not loaded. Check logs.")
         return
@@ -152,7 +177,7 @@ async def document_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             await update.message.reply_text("Processing failed: No valid signals were found in the PDF.")
             return
             
-        write_signals_to_csv(parsed_signals, OUTPUT_CSV_FILE)
+        write_signals_to_csv(parsed_signals, OUTPUT_CSV_FILE, symbol_mapping)
         await update.message.reply_text(f"Processing complete! Saved {len(parsed_signals)} signals to {OUTPUT_CSV_FILE}.")
     except Exception as e:
         logger.error(f"Critical error in document_handler: {e}")
@@ -174,6 +199,7 @@ def main() -> None:
     try:
         TELEGRAM_TOKEN = get_telegram_token(API_KEY_FILE)
         symbols = load_symbols_to_find(SYMBOLS_FILE)
+        symbol_mapping = load_symbol_mapping(SYMBOL_MAPPING_FILE)
         if not symbols:
             logger.error(f"Symbol file '{SYMBOLS_FILE}' is empty or missing. Bot cannot proceed.")
             return
@@ -181,6 +207,7 @@ def main() -> None:
         # Build and run the application
         application = Application.builder().token(TELEGRAM_TOKEN).build()
         application.bot_data['symbols_to_find'] = symbols
+        application.bot_data['symbol_mapping'] = symbol_mapping
 
         # Register the handlers
         application.add_handler(CommandHandler("start", start))

@@ -5,14 +5,17 @@
 //+------------------------------------------------------------------+
 #property copyright "Copyright 2025, Quantwater Tech Investments"
 #property link      "https://www.quantwater.tech"
-#property version   "6.03"
+#property version   "6.10"
 #include <Trade\Trade.mqh>
 //--- EA Input Parameters
 input group           "Risk Management"
 input double          FixedPercentageRisk = 1.0;     // Risk per trade (%)
 input double          MinimumAcceptableRRR = 1.5;    // Minimum Risk-Reward Ratio
 input group           "Entry Conditions"
-input double          EntryTolerancePips = 5.0;      // Tolerance for entry price matching
+input double          EntryTolerancePips = 5.0;      // Tolerance for entry price matching (fallback)
+input int             AtrPeriod = 14;                // ATR period for dynamic tolerance
+input double          EntryToleranceATR_Percent = 0.25; // Dynamic tolerance as % of ATR
+input double          MaxEntryTolerancePips = 25.0;  // Max cap for entry tolerance (in pips)
 input bool            WaitForEntryPrice = true;      // Wait for recommended entry price
 input int             MaxWaitMinutes = 60;           // Max time to wait for entry conditions
 input bool            EnableScenarioSwitch = true;   // Enable automatic scenario switching
@@ -23,6 +26,8 @@ input group           "Debug Settings"
 input bool            EnableDebugMode = true;        // Enable detailed debug logging
 input bool            LogFileContents = false;       // Log entire file contents (use carefully)
 input bool            EnableTradingStatusCheck = true; // Enable continuous trading status monitoring
+input group           "Execution Safety"
+input double          SpreadMultiplierForStop = 2.0; // Minimum stop distance in multiples of spread
 //--- Signal Data Structures
 struct SignalData
 {
@@ -204,9 +209,11 @@ int OnInit()
    DebugPrint("Timer Frequency: " + IntegerToString(TimerFrequency) + " seconds");
    DebugPrint("Risk Percentage: " + DoubleToString(FixedPercentageRisk, 2) + "%");
    DebugPrint("Minimum RRR: " + DoubleToString(MinimumAcceptableRRR, 2));
-   DebugPrint("Entry Tolerance: " + DoubleToString(EntryTolerancePips, 1) + " pips");
+   DebugPrint("Entry Tolerance (fallback pips): " + DoubleToString(EntryTolerancePips, 1));
+   DebugPrint("ATR Period: " + IntegerToString(AtrPeriod));
+   DebugPrint("ATR Tolerance %: " + DoubleToString(EntryToleranceATR_Percent, 2));
    DebugPrint("Wait for Entry Price: " + (WaitForEntryPrice ? "YES" : "NO"));
-   DebugPrint("Max Wait Time: " + IntegerToString(MaxWaitMinutes) + " minutes");
+   DebugPrint("Signal Expiration: SESSION-BASED (no time limit)");
    DebugPrint("Scenario Switching: " + (EnableScenarioSwitch ? "ENABLED" : "DISABLED"));
    DebugPrint("Trading Status Monitoring: " + (EnableTradingStatusCheck ? "ENABLED" : "DISABLED"));
    string commonPath = TerminalInfoString(TERMINAL_COMMONDATA_PATH);
@@ -319,13 +326,6 @@ void CheckEntryConditions(int signal_index)
 {
    if(signal_index >= pending_count) return;
    PendingSignal sig = pending_signals[signal_index];
-   // Check if signal has expired
-   if(TimeCurrent() - sig.signal_time > MaxWaitMinutes * 60)
-   {
-      DebugPrint("Signal expired for " + sig.symbol + " after " + IntegerToString(MaxWaitMinutes) + " minutes");
-      RemovePendingSignal(signal_index);
-      return;
-   }
    MqlTick tick;
    if(!SymbolInfoTick(sig.symbol, tick)) return;
    double current_market_price = (sig.current_action == "Buy") ? tick.ask : tick.bid;
@@ -365,7 +365,33 @@ void CheckEntryConditions(int signal_index)
    else
    {
       // Check if current price is within tolerance of recommended entry price
-      double tolerance = EntryTolerancePips * SymbolInfoDouble(sig.symbol, SYMBOL_POINT);
+      double point = SymbolInfoDouble(sig.symbol, SYMBOL_POINT);
+      // Dynamic ATR-based tolerance with cap (fallback to static pips if ATR unavailable)
+      double tolerance = 0.0;
+      int atr_handle = iATR(sig.symbol, PERIOD_CURRENT, AtrPeriod);
+      if(atr_handle != INVALID_HANDLE)
+      {
+         double atr_buf[];
+         if(CopyBuffer(atr_handle, 0, 0, 1, atr_buf) > 0)
+         {
+            double dynamic_tol = atr_buf[0] * EntryToleranceATR_Percent;
+            double cap_tol = MaxEntryTolerancePips * point;
+            double fallback_tol = EntryTolerancePips * point;
+            if(dynamic_tol > 0)
+               tolerance = MathMin(dynamic_tol, cap_tol);
+            else
+               tolerance = fallback_tol;
+         }
+         else
+         {
+            tolerance = EntryTolerancePips * point;
+         }
+         IndicatorRelease(atr_handle);
+      }
+      else
+      {
+         tolerance = EntryTolerancePips * point;
+      }
       if(sig.current_action == "Buy")
       {
          // For Buy orders, execute when market price is at or below entry price (better fill)
@@ -476,6 +502,7 @@ void ExecuteTradeFromSignal(int signal_index)
 
    // Use current market price for execution
    double execution_price = (sig.current_action == "Buy") ? tick.ask : tick.bid;
+   double spread = tick.ask - tick.bid;
    // Recalculate stop loss and take profit based on current market conditions
    double stop_loss, take_profit;
    if(WaitForEntryPrice)
@@ -500,6 +527,16 @@ void ExecuteTradeFromSignal(int signal_index)
          take_profit = execution_price - original_reward;
       }
    }
+   // Pre-trade breathing room check relative to spread
+   double min_stop_distance = spread * SpreadMultiplierForStop;
+   double distance_to_sl = (sig.current_action == "Buy") ? (execution_price - stop_loss) : (stop_loss - execution_price);
+   if(distance_to_sl <= min_stop_distance)
+   {
+      Print("*** TRADE ABORTED for " + sig.symbol + ": Stop too close to entry relative to spread ***");
+      DebugPrint("Required min: " + DoubleToString(min_stop_distance, _Digits) + 
+                 ", Actual: " + DoubleToString(distance_to_sl, _Digits));
+      return;
+   }
    // Validate prices
    if(stop_loss <= 0 || take_profit <= 0 || execution_price <= 0)
    {
@@ -511,8 +548,12 @@ void ExecuteTradeFromSignal(int signal_index)
    }
    // Calculate and validate Risk-Reward Ratio
    double point = SymbolInfoDouble(sig.symbol, SYMBOL_POINT);
-   double risk_pips = MathAbs(execution_price - stop_loss) / point;
-   double reward_pips = MathAbs(take_profit - execution_price) / point;
+   // Spread-aware risk: Buy uses Bid vs SL; Sell uses Ask vs SL
+   double risk_reference = (sig.current_action == "Buy") ? tick.bid : tick.ask;
+   double risk_pips = MathAbs(risk_reference - stop_loss) / point;
+   // Reward using executable side as well: Buy rewards vs Bid; Sell rewards vs Ask
+   double reward_reference = (sig.current_action == "Buy") ? tick.bid : tick.ask;
+   double reward_pips = MathAbs(take_profit - reward_reference) / point;
    if(risk_pips < 1)
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Risk too small (" + DoubleToString(risk_pips, 1) + " pips) ***");
@@ -525,8 +566,78 @@ void ExecuteTradeFromSignal(int signal_index)
             ") below minimum (" + DoubleToString(MinimumAcceptableRRR, 2) + ") ***");
       return;
    }
-   // Close existing positions on this symbol
-   CloseExistingPositions(sig.symbol);
+   // Trade continuation logic: modify same-direction position; close opposite
+   bool same_direction_modified = false;
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+   {
+      ulong ticket = PositionGetTicket(i);
+      if(PositionSelectByTicket(ticket))
+      {
+         string position_symbol;
+         if(PositionGetString(POSITION_SYMBOL, position_symbol) && position_symbol == sig.symbol)
+         {
+            long pos_type = PositionGetInteger(POSITION_TYPE);
+            bool is_buy_pos = (pos_type == POSITION_TYPE_BUY);
+            bool signal_is_buy = (sig.current_action == "Buy");
+            if(is_buy_pos == signal_is_buy)
+            {
+               // Continuation: modify existing SL/TP
+               double existing_sl = 0.0, existing_tp = 0.0;
+               PositionGetDouble(POSITION_SL, existing_sl);
+               PositionGetDouble(POSITION_TP, existing_tp);
+               if(trade.PositionModify(sig.symbol, stop_loss, take_profit))
+               {
+                  Print("*** CONTINUATION: Modified existing position on " + sig.symbol + " ***");
+                  DebugPrint("New SL: " + DoubleToString(stop_loss, _Digits) + 
+                             ", New TP: " + DoubleToString(take_profit, _Digits));
+                  same_direction_modified = true;
+               }
+               else
+               {
+                  // Task 6: If modification failed but SL/TP already equal to requested, treat as success
+                  bool sl_same = MathAbs(existing_sl - stop_loss) <= (SymbolInfoDouble(sig.symbol, SYMBOL_POINT));
+                  bool tp_same = MathAbs(existing_tp - take_profit) <= (SymbolInfoDouble(sig.symbol, SYMBOL_POINT));
+                  if(sl_same && tp_same)
+                  {
+                     DebugPrint("Continuation: SL/TP already match requested levels; treating as success");
+                     same_direction_modified = true;
+                  }
+                  else
+                  {
+                     DebugPrint("Failed to modify existing position on " + sig.symbol + ": " + trade.ResultComment());
+                  }
+               }
+               break;
+            }
+         }
+      }
+   }
+   if(same_direction_modified)
+   {
+      return; // Do not open a new trade
+   }
+   // Close opposite positions (if any)
+   for(int i2 = PositionsTotal() - 1; i2 >= 0; i2--)
+   {
+      ulong ticket2 = PositionGetTicket(i2);
+      if(PositionSelectByTicket(ticket2))
+      {
+         string position_symbol2;
+         if(PositionGetString(POSITION_SYMBOL, position_symbol2) && position_symbol2 == sig.symbol)
+         {
+            long pos_type2 = PositionGetInteger(POSITION_TYPE);
+            bool is_buy_pos2 = (pos_type2 == POSITION_TYPE_BUY);
+            bool signal_is_buy2 = (sig.current_action == "Buy");
+            if(is_buy_pos2 != signal_is_buy2)
+            {
+               if(trade.PositionClose(ticket2))
+                  DebugPrint("Closed opposite position #" + IntegerToString((int)ticket2) + " on " + sig.symbol);
+               else
+                  DebugPrint("Failed to close opposite position #" + IntegerToString((int)ticket2) + " on " + sig.symbol);
+            }
+         }
+      }
+   }
    // Calculate position size
    double lot_size = CalculatePositionSize(sig.symbol, execution_price, stop_loss, risk_pips);
    if(lot_size <= 0)
