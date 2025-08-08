@@ -745,19 +745,35 @@ double CalculatePositionSize(string symbol, double entry_price, double stop_loss
 {
    double risk_amount = AccountInfoDouble(ACCOUNT_BALANCE) * (FixedPercentageRisk / 100.0);
    double tick_value = SymbolInfoDouble(symbol, SYMBOL_TRADE_TICK_VALUE);
+   
+   // --- SAFETY CHECK FOR INVALID TICK VALUE ---
+   if(tick_value <= 0)
+   {
+      Print("*** TRADE ABORTED for " + symbol + ": Invalid Tick Value (" + DoubleToString(tick_value, 4) + ") ***");
+      Print(">>> SOLUTION: Please ensure the symbol '" + symbol + "' is enabled and visible in your MT5 Market Watch window, then restart the EA.");
+      return 0.0; // Return 0 lot size to abort trade
+   }
+
    double lot_step = SymbolInfoDouble(symbol, SYMBOL_VOLUME_STEP);
    double min_lot = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MIN);
    double max_lot = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MAX);
-   if(tick_value <= 0 || risk_pips <= 0)
-      return 0;
+   
+   if(risk_pips <= 0)
+   {
+      DebugPrint("Position sizing for " + symbol + ": Risk pips is zero or negative, cannot calculate lot size.");
+      return 0.0;
+   }
+      
    double lot_size = risk_amount / (risk_pips * tick_value);
    lot_size = NormalizeDouble(MathFloor(lot_size / lot_step) * lot_step, 2);
    lot_size = MathMax(min_lot, MathMin(max_lot, lot_size));
+   
    DebugPrint("Position sizing for " + symbol + ":");
    DebugPrint("Risk Amount: " + DoubleToString(risk_amount, 2));
    DebugPrint("Risk Pips: " + DoubleToString(risk_pips, 1));
-   DebugPrint("Tick Value: " + DoubleToString(tick_value, 2));
+   DebugPrint("Tick Value: " + DoubleToString(tick_value, 4)); // Increased precision for debugging
    DebugPrint("Calculated Lot Size: " + DoubleToString(lot_size, 2));
+   
    return lot_size;
 }
 //+------------------------------------------------------------------+

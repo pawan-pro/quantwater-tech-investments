@@ -79,17 +79,17 @@
 -   [x] **Task 4: Add a Stop Loss "Breathing Room" Check**
 -   [x] **Task 5: Implement Trade Continuation Logic**
 
--   [ ] **Task 6: Refine Trade Continuation Logic**
+-   [x] **Task 6: Refine Trade Continuation Logic**
     -   **Issue:** The EA opens a new trade if `PositionModify` fails because the SL/TP levels are identical to the existing ones.
     -   **Required Change:** After attempting to modify a position, check if the modification failed *and* if the SL/TP levels are the same. If both are true, treat it as a successful continuation and prevent a new trade from opening.
     -   **Impact:** Prevents duplicate positions when a new signal has the same parameters as an existing trade.
 
--   [ ] **Task 7: Add a Cap to ATR Entry Tolerance**
+-   [x] **Task 7: Add a Cap to ATR Entry Tolerance**
     -   **Issue:** The ATR-based tolerance can be excessively large during high volatility, leading to entries far from the intended price.
     -   **Required Change:** Add a new input parameter, e.g., `input double MaxEntryTolerancePips = 25.0;`. When calculating the entry tolerance, use the *minimum* value between the ATR calculation and the fixed `MaxEntryTolerancePips`.
     -   **Impact:** Provides the benefits of dynamic tolerance while preventing runaway entries in extreme market conditions.
 
--   [ ] **Task 8: Implement Broker-Specific Symbol Mapping**
+-   [x] **Task 8: Implement Broker-Specific Symbol Mapping**
     -   **Issue:** The Python script extracts generic symbol names (e.g., "US30") from the PDF, but the broker requires specific names (e.g., "US30Roll").
     -   **Required Change:**
         1.  Create a new file, `symbol_mapping.json`, to store the mapping between PDF names and broker symbols.

@@ -15,7 +15,8 @@ DATA_DIR = 'data'
 DOWNLOAD_DIR = os.path.join(DATA_DIR, 'downloaded_pdfs')
 
 # --- The 100% correct path confirmed by the Pathfinder EA ---
-OUTPUT_CSV_FILE = '/Users/pawan/Library/Application Support/net.metaquotes.wine.metatrader5/drive_c/users/user/AppData/Roaming/MetaQuotes/Terminal/Common/Files/signals.csv'
+# Use raw string on Windows to avoid unicode escape issues
+OUTPUT_CSV_FILE = 'C:/Users/Administrator/AppData/Roaming/MetaQuotes/Terminal/Common/Files/signals.csv'
 
 # --- Setup Logging ---
 logging.basicConfig(
@@ -23,6 +24,12 @@ logging.basicConfig(
     level=logging.INFO
 )
 logger = logging.getLogger(__name__)
+
+# --- Heuristic: detect currency pairs (6-letter symbols) ---
+def is_currency_pair(symbol: str) -> bool:
+    if not symbol:
+        return False
+    return re.fullmatch(r"[A-Za-z]{6}", symbol) is not None
 
 # --- Function to securely load the API key ---
 def get_telegram_token(file_path: str) -> str:
@@ -137,9 +144,17 @@ def write_signals_to_csv(signals: list, file_path: str, symbol_mapping: dict):
             for signal in signals:
                 modified_signal = signal.copy()
                 pdf_symbol = signal['Instrument']
-                broker_symbol = symbol_mapping.get(pdf_symbol, pdf_symbol)
-                if broker_symbol == pdf_symbol:
-                    logger.warning(f"No mapping found for '{pdf_symbol}'. Using as-is.")
+                mapped = symbol_mapping.get(pdf_symbol)
+                if mapped:
+                    # Use mapping as-is (mapping should already be the exact broker tradable symbol)
+                    broker_symbol = mapped
+                else:
+                    # Preserve previous behavior: append .sd only for currencies
+                    if is_currency_pair(pdf_symbol) and not pdf_symbol.lower().endswith('.sd'):
+                        broker_symbol = f"{pdf_symbol}.sd"
+                    else:
+                        broker_symbol = pdf_symbol
+                        logger.warning(f"No mapping for '{pdf_symbol}'. Using as-is.")
                 modified_signal["Instrument"] = broker_symbol
                 writer.writerow(modified_signal)
         
