@@ -29,9 +29,9 @@
 -   [x] Implement core trading logic (SL/TP based on Alternative's entry)
 -   [x] Implement **Expectancy Filter** to validate trades based on RRR
 -   [x] Implement **Fixed Percentage Risk** for position sizing
--   [x] Implement basic trade execution using the `CTrade` library
+-   [X] Implement basic trade execution using the `CTrade` library
         [x] Some trades are not being placed due to invalid prices 
--   [x] Implement logic to avoid duplicate trades and close old trades on new signal arrival
+-   [ ] Implement logic to avoid duplicate trades and close old trades on new signal arrival
 
 ---
 
@@ -56,49 +56,40 @@
     -   [x] **Verify Python Script:** Check the script's console output to ensure it downloaded and processed the file without errors.
     -   [x] **Verify CSV Creation:** Check that the `signals.csv` file appears in the `MQL5\Files` directory and its content is correct.
     -   [x] **Verify EA Detection:** Check the EA's "Experts" tab in the MT5 Toolbox to confirm it detected the "New signal file".
-    -   [x] **Verify EA Logic:** Check the EA log to confirm:
-        -   [x] Correct RRR was calculated.
-        -   [x] The RRR passed the `MinimumAcceptableRRR` filter.
+    -   [] **Verify EA Logic:** Check the EA log to confirm:
+        -   [ ] Correct RRR was calculated.
+        -   [ ] The RRR passed the `MinimumAcceptableRRR` filter.
         -   [x] The correct Lot Size was calculated.
-    -   [x] **Verify Trade Execution:** Check that the trade was opened on the demo account with the **exact Stop Loss and Take Profit levels** calculated by the EA.
+    -   [ ] **Verify Trade Execution:** Check that the trade was opened on the demo account with the **exact Stop Loss and Take Profit levels** calculated by the EA.
 
 -   [ ] **Task: Logic Refinement & Hardening**
     -   [ ] Based on testing, consider improving the entry logic. The current version enters at market price; you could modify it to use pending orders (`TRADE_ACTION_PENDING`) for more precise entries.
     -   [ ] Add more detailed logging to a separate log file for easier debugging over time.
     -   [ ] Review the "close on new signal" logic to ensure it behaves as expected across different market conditions.
 
-
----
-### **EA Logic Updates (Based on Performance Analysis - Aug 8, 2025)**
-
-*   **Goal:** Refine the EA's trade execution and management logic to improve robustness, prevent premature stop-outs, and align its behavior with the strategic intent of the signals.
-
--   [x] **Task 1: Correct the Risk-Reward Ratio (RRR) Calculation**
--   [x] **Task 2: Change Signal Expiration to "Session Validity"**
--   [x] **Task 3: Implement Dynamic (ATR-Based) Entry Tolerance**
--   [x] **Task 4: Add a Stop Loss "Breathing Room" Check**
--   [x] **Task 5: Implement Trade Continuation Logic**
-
--   [x] **Task 6: Refine Trade Continuation Logic**
-    -   **Issue:** The EA opens a new trade if `PositionModify` fails because the SL/TP levels are identical to the existing ones.
-    -   **Required Change:** After attempting to modify a position, check if the modification failed *and* if the SL/TP levels are the same. If both are true, treat it as a successful continuation and prevent a new trade from opening.
-    -   **Impact:** Prevents duplicate positions when a new signal has the same parameters as an existing trade.
-
--   [x] **Task 7: Add a Cap to ATR Entry Tolerance**
-    -   **Issue:** The ATR-based tolerance can be excessively large during high volatility, leading to entries far from the intended price.
-    -   **Required Change:** Add a new input parameter, e.g., `input double MaxEntryTolerancePips = 25.0;`. When calculating the entry tolerance, use the *minimum* value between the ATR calculation and the fixed `MaxEntryTolerancePips`.
-    -   **Impact:** Provides the benefits of dynamic tolerance while preventing runaway entries in extreme market conditions.
-
--   [x] **Task 8: Implement Broker-Specific Symbol Mapping**
-    -   **Issue:** The Python script extracts generic symbol names (e.g., "US30") from the PDF, but the broker requires specific names (e.g., "US30Roll").
-    -   **Required Change:**
-        1.  Create a new file, `symbol_mapping.json`, to store the mapping between PDF names and broker symbols.
-        2.  Update `bot_listener.py` to read this mapping file.
-        3.  When writing to `signals.csv`, the script should now use the mapping to translate the PDF name to the correct, tradable broker symbol.
-    -   **Impact:** Ensures the EA receives the correct symbols to trade, preventing "invalid symbol" errors.
-
+-   [ ] **Task-TBU: Implement Full Signal Lifecycle Logic (High Priority)**
+    -   **Objective:** Refactor the EA's core logic to correctly handle the switch from "ScenarioOne" to the "Alternative" scenario, preventing the EA from discarding the alternative plan after the first trade is executed.
+    -   **Required Logic Flow:**
+        1.  **Signal Persistence:** The `PendingSignal` object for an instrument must remain in memory even after the "ScenarioOne" trade is executed.
+        2.  **Concurrent Monitoring:** While "ScenarioOne" is active, the EA must monitor for both its entry condition and the "switch condition" (price crossing the alternative scenario's entry).
+        3.  **Scenario Invalidation:** If the switch condition is met (e.g., the stop-loss is hit), the EA must invalidate "ScenarioOne", update its internal state to make the "Alternative" scenario active, and begin monitoring for the alternative entry.
+        4.  **Lifecycle Completion:** The `PendingSignal` should only be removed after the "Alternative" trade is executed or the trading session ends.
+    
+- [ ] **Task-TBU:No English. Parsing of Arabic Signals.**  
+    [ ] **Task-TBU: Add Support for Arabic PDF Reports**
+        -   **Objective:** Modify the Python parsing script (`bot_listener.py`) to handle reports where the text is in Arabic.
+        -   **Proposed Logic:**
+            1.  **Symbol-Centric Parsing:** Instead of searching for the English keyword "Instrument", the script will iterate through the known symbols in `symbols.txt` to locate signal blocks within the PDF text.
+            2.  **Keyword Matching:** Hardcode the Arabic words for "Buy" (`شراء`) and "Sell" (`بيع`) to correctly identify the trade action.
+            3.  **Structural Assumption:** Rely on the report's structure, assuming the first instance of a symbol is "ScenarioOne" and the second is the "Alternative".
+        -   **Goal:** Enable the bot to successfully parse both English and Arabic reports without requiring full translation.
+    
 ---------------------------------------------------
 
     [ ] prioritization
-    [ ] # of trades and SL sizing, if applicable. the SL size is enough to absorb EA impact probably, or technicals align with expected outcome and vice versa. 
+    [ ] # of trades and SL | sizing, if applicable. the SL size is enough to absorb EA impact probably, or technicals align with expected outcome and vice versa. 
     [ ] continuation of previous day's trade (can be used in priorization) | trend can be utilized to analyze the continuation pattern, taking into consideration the rrr as well
+    [ ] alternate scenario XAUUSD not executed. 202050811. too many trades and all negative. second pdf arrived in Arabic language.
+    [ ] Crypto not covered as of now.  
+    
+    

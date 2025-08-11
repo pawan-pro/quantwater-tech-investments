@@ -53,6 +53,7 @@ struct PendingSignal
    datetime signal_time;         // When signal was created
    bool scenario_one_active;     // True = Scenario 1, False = Alternative
    double scenario_switch_price; // Price that triggers scenario switch
+   bool primary_trade_executed;  // Flag to check if the first trade was made
    // Copy constructor
    PendingSignal(const PendingSignal &other)
    {
@@ -67,6 +68,7 @@ struct PendingSignal
       signal_time = other.signal_time;
       scenario_one_active = other.scenario_one_active;
       scenario_switch_price = other.scenario_switch_price;
+      primary_trade_executed = other.primary_trade_executed;
    }
    // Default constructor (important for arrays)
    PendingSignal()
@@ -82,6 +84,7 @@ struct PendingSignal
       signal_time = 0;
       scenario_one_active = true;
       scenario_switch_price = 0.0;
+      primary_trade_executed = false;
    }
 };
 //--- Global Variables
@@ -418,9 +421,9 @@ void CheckEntryConditions(int signal_index)
 //+------------------------------------------------------------------+
 //| Execute Trade from Pending Signal                                |
 //+------------------------------------------------------------------+
-void ExecuteTradeFromSignal(int signal_index)
+bool ExecuteTradeFromSignal(int signal_index)
 {
-   if(signal_index >= pending_count) return;
+   if(signal_index >= pending_count) return false;
    PendingSignal sig = pending_signals[signal_index];
    Print("*** EXECUTING TRADE for " + sig.symbol + " ***");
    // COMPREHENSIVE PRE-TRADE CHECKS
@@ -429,39 +432,39 @@ void ExecuteTradeFromSignal(int signal_index)
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Trading permissions disabled ***");
       Print(">>> Check AutoTrading button and Expert Advisor settings");
-      return;
+      return false;
    }
    // 2. Check broker connection
    if(!TerminalInfoInteger(TERMINAL_CONNECTED))
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Not connected to broker ***");
-      return;
+      return false;
    }
    // 3. Check account trading status
    if(!AccountInfoInteger(ACCOUNT_TRADE_ALLOWED))
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Account trading disabled ***");
       Print(">>> Contact your broker to enable trading on this account");
-      return;
+      return false;
    }
    // 4. Check symbol availability and trading status
    if(!CheckSymbolTradingStatus(sig.symbol, true))
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Symbol trading disabled ***");
-      return;
+      return false;
    }
    // 5. Ensure symbol is selected
    if(!SymbolSelect(sig.symbol, true))
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Failed to select symbol ***");
-      return;
+      return false;
    }
    // 6. Get current tick data
    MqlTick tick;
    if(!SymbolInfoTick(sig.symbol, tick))
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": No tick data available ***");
-      return;
+      return false;
    }
    // 7. Simplified market session check using SYMBOL_SESSION_OPEN/CLOSE
    // ASSUMPTION: Markets are open 24/7. Skipping detailed session check.
@@ -535,7 +538,7 @@ void ExecuteTradeFromSignal(int signal_index)
       Print("*** TRADE ABORTED for " + sig.symbol + ": Stop too close to entry relative to spread ***");
       DebugPrint("Required min: " + DoubleToString(min_stop_distance, _Digits) + 
                  ", Actual: " + DoubleToString(distance_to_sl, _Digits));
-      return;
+      return false;
    }
    // Validate prices
    if(stop_loss <= 0 || take_profit <= 0 || execution_price <= 0)
@@ -544,7 +547,7 @@ void ExecuteTradeFromSignal(int signal_index)
       DebugPrint("Execution: " + DoubleToString(execution_price, _Digits));
       DebugPrint("Stop Loss: " + DoubleToString(stop_loss, _Digits));
       DebugPrint("Take Profit: " + DoubleToString(take_profit, _Digits));
-      return;
+      return false;
    }
    // Calculate and validate Risk-Reward Ratio
    double point = SymbolInfoDouble(sig.symbol, SYMBOL_POINT);
@@ -557,14 +560,14 @@ void ExecuteTradeFromSignal(int signal_index)
    if(risk_pips < 1)
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Risk too small (" + DoubleToString(risk_pips, 1) + " pips) ***");
-      return;
+      return false;
    }
    double rrr = reward_pips / risk_pips;
    if(rrr < MinimumAcceptableRRR)
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": RRR (" + DoubleToString(rrr, 2) +
             ") below minimum (" + DoubleToString(MinimumAcceptableRRR, 2) + ") ***");
-      return;
+      return false;
    }
    // Trade continuation logic: modify same-direction position; close opposite
    bool same_direction_modified = false;
@@ -614,7 +617,7 @@ void ExecuteTradeFromSignal(int signal_index)
    }
    if(same_direction_modified)
    {
-      return; // Do not open a new trade
+      return true; // Treated as successful continuation; do not open a new trade
    }
    // Close opposite positions (if any)
    for(int i2 = PositionsTotal() - 1; i2 >= 0; i2--)
@@ -643,7 +646,7 @@ void ExecuteTradeFromSignal(int signal_index)
    if(lot_size <= 0)
    {
       Print("*** TRADE ABORTED for " + sig.symbol + ": Invalid lot size ***");
-      return;
+      return false;
    }
    // EXECUTE THE TRADE with enhanced error handling
    trade.SetExpertMagicNumber(12345);
@@ -674,6 +677,7 @@ void ExecuteTradeFromSignal(int signal_index)
       Print("Lot Size: " + DoubleToString(lot_size, 2) + " | RRR: " + DoubleToString(rrr, 2));
       Print("Scenario: " + (sig.scenario_one_active ? "Primary" : "Alternative"));
       Print("Order Ticket: " + IntegerToString((int)trade.ResultOrder()));
+      return true;
    }
    else
    {
@@ -715,6 +719,7 @@ void ExecuteTradeFromSignal(int signal_index)
       Print("=== POST-FAILURE DIAGNOSTICS ===");
       CheckTradingPermissions(true);
       CheckSymbolTradingStatus(sig.symbol, true);
+      return false;
    }
 }
 //+------------------------------------------------------------------+
@@ -745,35 +750,19 @@ double CalculatePositionSize(string symbol, double entry_price, double stop_loss
 {
    double risk_amount = AccountInfoDouble(ACCOUNT_BALANCE) * (FixedPercentageRisk / 100.0);
    double tick_value = SymbolInfoDouble(symbol, SYMBOL_TRADE_TICK_VALUE);
-   
-   // --- SAFETY CHECK FOR INVALID TICK VALUE ---
-   if(tick_value <= 0)
-   {
-      Print("*** TRADE ABORTED for " + symbol + ": Invalid Tick Value (" + DoubleToString(tick_value, 4) + ") ***");
-      Print(">>> SOLUTION: Please ensure the symbol '" + symbol + "' is enabled and visible in your MT5 Market Watch window, then restart the EA.");
-      return 0.0; // Return 0 lot size to abort trade
-   }
-
    double lot_step = SymbolInfoDouble(symbol, SYMBOL_VOLUME_STEP);
    double min_lot = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MIN);
    double max_lot = SymbolInfoDouble(symbol, SYMBOL_VOLUME_MAX);
-   
-   if(risk_pips <= 0)
-   {
-      DebugPrint("Position sizing for " + symbol + ": Risk pips is zero or negative, cannot calculate lot size.");
-      return 0.0;
-   }
-      
+   if(tick_value <= 0 || risk_pips <= 0)
+      return 0;
    double lot_size = risk_amount / (risk_pips * tick_value);
    lot_size = NormalizeDouble(MathFloor(lot_size / lot_step) * lot_step, 2);
    lot_size = MathMax(min_lot, MathMin(max_lot, lot_size));
-   
    DebugPrint("Position sizing for " + symbol + ":");
    DebugPrint("Risk Amount: " + DoubleToString(risk_amount, 2));
    DebugPrint("Risk Pips: " + DoubleToString(risk_pips, 1));
-   DebugPrint("Tick Value: " + DoubleToString(tick_value, 4)); // Increased precision for debugging
+   DebugPrint("Tick Value: " + DoubleToString(tick_value, 2));
    DebugPrint("Calculated Lot Size: " + DoubleToString(lot_size, 2));
-   
    return lot_size;
 }
 //+------------------------------------------------------------------+
