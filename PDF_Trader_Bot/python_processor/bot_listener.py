@@ -127,6 +127,85 @@ def parse_all_signals(text: str, symbols: list) -> list:
     logger.info(f"Successfully parsed {len(all_signals)} total signals from the provided list.")
     return all_signals
 
+# --- Helpers for Arabic support ---
+def contains_arabic(text: str) -> bool:
+    return re.search(r"[\u0600-\u06FF]", text) is not None
+
+def _extract_numbers_flexible(text: str) -> list:
+    """Extract numbers allowing either dot or comma as decimal separator."""
+    raw = re.findall(r"\d+[\.,]?\d*", text)
+    numbers = []
+    for token in raw:
+        # Normalize comma to dot
+        normalized = token.replace(',', '.')
+        try:
+            numbers.append(float(normalized))
+        except ValueError:
+            continue
+    return numbers
+
+def parse_arabic_signals(text: str, symbols: list) -> list:
+    """
+    Symbol-centric parsing for Arabic reports.
+    Assumptions:
+    - First encounter for a symbol is ScenarioOne; second is Alternative
+    - Action keywords: Buy = "شراء", Sell = "بيع"
+    - Entry is the first number near the action; Target is the next number
+    """
+    results = []
+    text_lower = text.lower()
+    for symbol in symbols:
+        occurrences = []
+        start = 0
+        symbol_lower = symbol.lower()
+        while True:
+            pos = text_lower.find(symbol_lower, start)
+            if pos == -1:
+                break
+            occurrences.append(pos)
+            start = pos + len(symbol)
+            if len(occurrences) >= 3:
+                # Limit search to avoid runaway on malformed docs
+                break
+        if not occurrences:
+            continue
+        for idx, pos in enumerate(occurrences[:2]):
+            window = text[pos: pos + 800]
+            action = None
+            if 'شراء' in window:
+                action = 'Buy'
+            elif 'بيع' in window:
+                action = 'Sell'
+            if not action:
+                # Try to fallback if English action words are present in Arabic doc
+                if re.search(r"\bBuy\b", window, re.IGNORECASE):
+                    action = 'Buy'
+                elif re.search(r"\bSell\b", window, re.IGNORECASE):
+                    action = 'Sell'
+            numbers = _extract_numbers_flexible(window)
+            if action and len(numbers) >= 2:
+                entry = numbers[0]
+                target = numbers[1]
+                scenario = 'ScenarioOne' if idx == 0 else 'Alternative'
+                results.append({
+                    'Instrument': symbol,
+                    'Scenario': scenario,
+                    'Action': action,
+                    'Entry': entry,
+                    'Target': target,
+                })
+    return results
+
+def parse_signals_auto(text: str, symbols: list) -> list:
+    """Try English parsing first, then Arabic if needed or if Arabic text is detected."""
+    english = parse_all_signals(text, symbols)
+    if contains_arabic(text) or not english:
+        arabic = parse_arabic_signals(text, symbols)
+        # Prefer the richer result set
+        if len(arabic) >= len(english):
+            return arabic
+    return english
+
 # --- Function to write signals to a CSV file ---
 def write_signals_to_csv(signals: list, file_path: str, symbol_mapping: dict):
     """
@@ -187,7 +266,7 @@ async def document_handler(update: Update, context: ContextTypes.DEFAULT_TYPE) -
             await update.message.reply_text("Processing failed: Could not extract text from PDF.")
             return
 
-        parsed_signals = parse_all_signals(extracted_text, symbols_to_find)
+        parsed_signals = parse_signals_auto(extracted_text, symbols_to_find)
         if not parsed_signals:
             await update.message.reply_text("Processing failed: No valid signals were found in the PDF.")
             return

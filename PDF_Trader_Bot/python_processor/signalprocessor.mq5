@@ -28,6 +28,7 @@ input bool            LogFileContents = false;       // Log entire file contents
 input bool            EnableTradingStatusCheck = true; // Enable continuous trading status monitoring
 input group           "Execution Safety"
 input double          SpreadMultiplierForStop = 2.0; // Minimum stop distance in multiples of spread
+input int             StartupGraceSeconds = 30;       // Suppress entries for N seconds after EA start/restart
 //--- Signal Data Structures
 struct SignalData
 {
@@ -53,7 +54,9 @@ struct PendingSignal
    datetime signal_time;         // When signal was created
    bool scenario_one_active;     // True = Scenario 1, False = Alternative
    double scenario_switch_price; // Price that triggers scenario switch
-   bool primary_trade_executed;  // Flag to check if the first trade was made
+   bool scenario_one_executed;   // Whether ScenarioOne trade has been executed
+   bool alternative_executed;    // Whether Alternative trade has been executed
+   bool primary_trade_executed;  // Flag to check if the first trade was made (legacy)
    // Copy constructor
    PendingSignal(const PendingSignal &other)
    {
@@ -68,6 +71,8 @@ struct PendingSignal
       signal_time = other.signal_time;
       scenario_one_active = other.scenario_one_active;
       scenario_switch_price = other.scenario_switch_price;
+      scenario_one_executed = other.scenario_one_executed;
+      alternative_executed = other.alternative_executed;
       primary_trade_executed = other.primary_trade_executed;
    }
    // Default constructor (important for arrays)
@@ -84,6 +89,8 @@ struct PendingSignal
       signal_time = 0;
       scenario_one_active = true;
       scenario_switch_price = 0.0;
+      scenario_one_executed = false;
+      alternative_executed = false;
       primary_trade_executed = false;
    }
 };
@@ -94,6 +101,73 @@ int               debugCounter = 0;
 PendingSignal     pending_signals[];
 int               pending_count = 0;
 datetime          lastStatusCheck = 0;
+// Daily traded symbols memory
+string            traded_symbols_today[];
+int               last_reset_date_key = 0; // yyyymmdd
+string            GV_PREFIX_TRADE = "SRP_T_";
+string            GV_KEY_LAST_MTIME = "SRP_LAST_MTIME";
+datetime          startup_time = 0;
+
+// Create a yyyymmdd integer key for a given time
+int MakeDateKey(datetime t)
+{
+   MqlDateTime dt;
+   TimeToStruct(t, dt);
+   return dt.year * 10000 + dt.mon * 100 + dt.day;
+}
+
+// Ensure daily reset of traded symbols occurs once per new day
+void EnsureDailyReset()
+{
+   int current_key = MakeDateKey(TimeCurrent());
+   if(current_key != last_reset_date_key)
+   {
+      ArrayResize(traded_symbols_today, 0);
+      last_reset_date_key = current_key;
+      Print("[DAILY RESET] Cleared traded symbols memory for new day: ", IntegerToString(current_key));
+      // Re-sync from persisted globals for the new day
+      int total = GlobalVariablesTotal();
+      string expectedPrefix = GV_PREFIX_TRADE + IntegerToString(current_key) + "_";
+      for(int i = 0; i < total; i++)
+      {
+         string gvname = GlobalVariableName(i);
+         if(StringFind(gvname, expectedPrefix) == 0)
+         {
+            string sym = StringSubstr(gvname, StringLen(expectedPrefix));
+            if(sym != "")
+            {
+               int n = ArraySize(traded_symbols_today);
+               ArrayResize(traded_symbols_today, n + 1);
+               traded_symbols_today[n] = sym;
+            }
+         }
+      }
+   }
+}
+
+// Check if a symbol has already been traded today
+bool HasTradedToday(string symbol)
+{
+   for(int i = ArraySize(traded_symbols_today) - 1; i >= 0; i--)
+   {
+      if(traded_symbols_today[i] == symbol)
+         return true;
+   }
+   return false;
+}
+
+// Mark a symbol as traded today (idempotent)
+void AddTradedToday(string symbol)
+{
+   if(HasTradedToday(symbol)) return;
+   int n = ArraySize(traded_symbols_today);
+   ArrayResize(traded_symbols_today, n + 1);
+   traded_symbols_today[n] = symbol;
+   DebugPrint("Marked as traded today: " + symbol);
+   // Persist to terminal global variables with date-scoped key
+   string key = GV_PREFIX_TRADE + IntegerToString(last_reset_date_key) + "_" + symbol;
+   GlobalVariableSet(key, (double)TimeCurrent());
+}
 //+------------------------------------------------------------------+
 //| Debug Print Function                                             |
 //+------------------------------------------------------------------+
@@ -204,6 +278,47 @@ void MonitorTradingStatus()
 //+------------------------------------------------------------------+
 int OnInit()
 {
+   // Capture startup time for grace period
+   startup_time = TimeCurrent();
+   // Restore last processed file modify time to avoid reprocessing on restart
+   if(GlobalVariableCheck(GV_KEY_LAST_MTIME))
+   {
+      double gv = GlobalVariableGet(GV_KEY_LAST_MTIME);
+      lastFileModifyTime = (long)gv;
+      DebugPrint("Restored last file modify time from globals: " + TimeToString((datetime)lastFileModifyTime));
+   }
+   else
+   {
+      // Initialize baseline to current file's modify time if signals file exists
+      if(FileIsExist(SignalFileName, FILE_COMMON))
+      {
+         int fh = FileOpen(SignalFileName, FILE_READ | FILE_BIN | FILE_COMMON);
+         if(fh != INVALID_HANDLE)
+         {
+            long mtime = FileGetInteger(fh, FILE_MODIFY_DATE);
+            FileClose(fh);
+            if(mtime > 0)
+            {
+               lastFileModifyTime = mtime;
+               GlobalVariableSet(GV_KEY_LAST_MTIME, (double)mtime);
+               DebugPrint("Initialized baseline last file modify time: " + TimeToString((datetime)mtime));
+            }
+         }
+      }
+   }
+   // Seed traded memory from currently open positions to prevent re-entries after restart
+   for(int i = PositionsTotal() - 1; i >= 0; i--)
+   {
+      ulong ticket = PositionGetTicket(i);
+      if(PositionSelectByTicket(ticket))
+      {
+         string psym;
+         if(PositionGetString(POSITION_SYMBOL, psym))
+         {
+            AddTradedToday(psym);
+         }
+      }
+   }
    Print("=== SmartReportsProcessorEA v6.03 Initializing ===");
    DebugPrint("Account Number: " + IntegerToString(AccountInfoInteger(ACCOUNT_LOGIN)));
    DebugPrint("Account Balance: " + DoubleToString(AccountInfoDouble(ACCOUNT_BALANCE), 2));
@@ -278,6 +393,8 @@ void OnTick()
 void OnTimer()
 {
    DebugPrint("Timer triggered - checking signal file");
+   // Daily reset of traded symbols memory
+   EnsureDailyReset();
    // Monitor trading status periodically
    MonitorTradingStatus();
    if(!FileIsExist(SignalFileName, FILE_COMMON))
@@ -294,7 +411,7 @@ void OnTimer()
    long currentModifyTime = FileGetInteger(fileHandle, FILE_MODIFY_DATE);
    long fileSizeLong = FileGetInteger(fileHandle, FILE_SIZE);
    if(fileSizeLong > INT_MAX) {
-      DebugPrint("File too large: " + IntegerToString((int)fileSizeLong) + " bytes");
+      DebugPrint("File too large: " + IntegerToString((long)fileSizeLong) + " bytes");
       FileClose(fileHandle);
       return;
    }
@@ -307,6 +424,8 @@ void OnTimer()
       Print("*** NEW SIGNAL FILE DETECTED ***");
       lastFileModifyTime = currentModifyTime;
       ProcessSignals();
+      // Persist the last processed modify time to survive restarts
+      GlobalVariableSet(GV_KEY_LAST_MTIME, (double)currentModifyTime);
    }
    else
    {
@@ -329,6 +448,19 @@ void CheckEntryConditions(int signal_index)
 {
    if(signal_index >= pending_count) return;
    PendingSignal sig = pending_signals[signal_index];
+   // Step 1: Daily memory pre-check
+   EnsureDailyReset();
+   if(HasTradedToday(sig.symbol))
+   {
+      DebugPrint("Skipping signal for " + sig.symbol + " - already traded today.");
+      return;
+   }
+   // Startup grace period to avoid instant entries after restart
+   if(TimeCurrent() - startup_time < StartupGraceSeconds)
+   {
+      DebugPrint("Startup grace active; skipping evaluation for " + sig.symbol);
+      return;
+   }
    MqlTick tick;
    if(!SymbolInfoTick(sig.symbol, tick)) return;
    double current_market_price = (sig.current_action == "Buy") ? tick.ask : tick.bid;
@@ -345,6 +477,8 @@ void CheckEntryConditions(int signal_index)
          Print("*** SCENARIO SWITCH TRIGGERED for " + sig.symbol + " ***");
          Print("Market price " + DoubleToString(current_market_price, _Digits) +
                " crossed switch level " + DoubleToString(sig.scenario_switch_price, _Digits));
+         // Close any open position on this symbol before switching
+         CloseExistingPositions(sig.symbol);
          // Switch to alternative scenario - update the array element directly
          pending_signals[signal_index].current_action = sig.alt_action;
          pending_signals[signal_index].current_entry = sig.alt_entry;
@@ -412,10 +546,35 @@ void CheckEntryConditions(int signal_index)
                    ", Market: " + DoubleToString(current_market_price, _Digits));
       }
    }
+   // Prevent re-executing an already completed scenario
+   if(sig.scenario_one_active && sig.scenario_one_executed)
+      execute_trade = false;
+   if(!sig.scenario_one_active && sig.alternative_executed)
+   {
+      // Lifecycle finished; remove if still present
+      RemovePendingSignal(signal_index);
+      return;
+   }
+
    if(execute_trade)
    {
-      ExecuteTradeFromSignal(signal_index);
-      RemovePendingSignal(signal_index);
+      bool trade_ok = ExecuteTradeFromSignal(signal_index);
+      if(trade_ok)
+      {
+         if(pending_signals[signal_index].scenario_one_active)
+         {
+            pending_signals[signal_index].scenario_one_executed = true;
+            DebugPrint("ScenarioOne executed for " + sig.symbol + "; keeping signal active and monitoring for switch.");
+         }
+         else
+         {
+            pending_signals[signal_index].alternative_executed = true;
+            DebugPrint("Alternative executed for " + sig.symbol + "; removing signal.");
+            // Mark as traded today and remove
+            AddTradedToday(sig.symbol);
+            RemovePendingSignal(signal_index);
+         }
+      }
    }
 }
 //+------------------------------------------------------------------+
@@ -666,7 +825,7 @@ bool ExecuteTradeFromSignal(int signal_index)
    else
       result = trade.Sell(lot_size, sig.symbol, 0, stop_loss, take_profit);
    // Enhanced error reporting
-   int retcode = (int)trade.ResultRetcode(); // Fixed: Cast uint to int
+   uint retcode = trade.ResultRetcode();
    if(retcode == TRADE_RETCODE_DONE)
    {
       Print("*** TRADE EXECUTED SUCCESSFULLY ***");
@@ -676,13 +835,13 @@ bool ExecuteTradeFromSignal(int signal_index)
             " | Stop: " + DoubleToString(stop_loss, _Digits));
       Print("Lot Size: " + DoubleToString(lot_size, 2) + " | RRR: " + DoubleToString(rrr, 2));
       Print("Scenario: " + (sig.scenario_one_active ? "Primary" : "Alternative"));
-      Print("Order Ticket: " + IntegerToString((int)trade.ResultOrder()));
+       Print("Order Ticket: " + IntegerToString((long)trade.ResultOrder()));
       return true;
    }
    else
    {
       Print("*** TRADE FAILED for " + sig.symbol + " ***");
-      Print("Error Code: " + IntegerToString(retcode));
+      Print("Error Code: " + IntegerToString((long)retcode));
       Print("Error Description: " + trade.ResultComment());
       // Detailed error diagnosis
       switch(retcode)
@@ -710,7 +869,7 @@ bool ExecuteTradeFromSignal(int signal_index)
             break;
          case TRADE_RETCODE_INVALID_STOPS:
             Print(">>> SOLUTION: Adjust stop loss/take profit levels");
-            Print(">>> Min stop level: " + IntegerToString((int)SymbolInfoInteger(sig.symbol, SYMBOL_TRADE_STOPS_LEVEL)) + " points");
+             Print(">>> Min stop level: " + IntegerToString(SymbolInfoInteger(sig.symbol, SYMBOL_TRADE_STOPS_LEVEL)) + " points");
             break;
          default:
             Print(">>> Check MT5 documentation for error code: " + IntegerToString(retcode));
@@ -786,9 +945,7 @@ void RemovePendingSignal(int index)
 void ProcessSignals()
 {
    Print("=== PROCESSING NEW SMART REPORTS SIGNALS ===");
-   // Clear existing pending signals
-   ArrayResize(pending_signals, 0);
-   pending_count = 0;
+   // Preserve existing pending signals to maintain lifecycle across updates
    SignalData signals_to_process[];
    int signal_count = 0;
    // Read and parse the file
@@ -918,33 +1075,160 @@ void ProcessSignals()
          temp_signals[sig_idx].alt_target = target;
       }
    }
-   // Create pending signals from valid pairs
+   // Create or update pending signals from valid pairs
    for(int t = 0; t < temp_count; t++)
    {
       if(temp_signals[t].s1_action != "" && temp_signals[t].alt_action != "")
       {
-         ArrayResize(pending_signals, pending_count + 1);
-         // Direct assignment to array element
-         pending_signals[pending_count].symbol = temp_signals[t].symbol;
-         pending_signals[pending_count].current_action = temp_signals[t].s1_action;
-         pending_signals[pending_count].current_entry = temp_signals[t].s1_entry;
-         pending_signals[pending_count].current_target = temp_signals[t].s1_target;
-         pending_signals[pending_count].current_stop_loss = temp_signals[t].alt_entry; // Alternative entry as stop loss
-         pending_signals[pending_count].alt_action = temp_signals[t].alt_action;
-         pending_signals[pending_count].alt_entry = temp_signals[t].alt_entry;
-         pending_signals[pending_count].alt_target = temp_signals[t].alt_target;
-         pending_signals[pending_count].signal_time = TimeCurrent();
-         pending_signals[pending_count].scenario_one_active = true;
-         pending_signals[pending_count].scenario_switch_price = temp_signals[t].alt_entry; // Switch trigger
-         Print("*** PENDING SIGNAL CREATED: " + pending_signals[pending_count].symbol + " ***");
-         Print("Primary: " + pending_signals[pending_count].current_action + " at " +
-               DoubleToString(pending_signals[pending_count].current_entry, _Digits) +
-               " | Target: " + DoubleToString(pending_signals[pending_count].current_target, _Digits));
-         Print("Alternative: " + pending_signals[pending_count].alt_action + " at " +
-               DoubleToString(pending_signals[pending_count].alt_entry, _Digits) +
-               " | Target: " + DoubleToString(pending_signals[pending_count].alt_target, _Digits));
-         Print("Switch Price: " + DoubleToString(pending_signals[pending_count].scenario_switch_price, _Digits));
-         pending_count++;
+         // Try to find an existing pending signal for this symbol
+         int existing_idx = -1;
+         for(int ps = 0; ps < pending_count; ps++)
+         {
+            if(pending_signals[ps].symbol == temp_signals[t].symbol)
+            {
+               existing_idx = ps;
+               break;
+            }
+         }
+         if(existing_idx >= 0)
+         {
+            // Task 1.1: Prioritize latest report with continuation logic
+            PendingSignal existing = pending_signals[existing_idx];
+            bool live_exists = false;
+            bool live_is_buy = false;
+            // Detect live position on this symbol
+            for(int lp = PositionsTotal() - 1; lp >= 0; lp--)
+            {
+               ulong lpt = PositionGetTicket(lp);
+               if(PositionSelectByTicket(lpt))
+               {
+                  string psym;
+                  if(PositionGetString(POSITION_SYMBOL, psym) && psym == existing.symbol)
+                  {
+                     long ptype = PositionGetInteger(POSITION_TYPE);
+                     live_exists = true;
+                     live_is_buy = (ptype == POSITION_TYPE_BUY);
+                     break;
+                  }
+               }
+            }
+            // Determine which action to compare against based on current scenario activity
+            string new_action_to_compare = existing.scenario_one_active ? temp_signals[t].s1_action : temp_signals[t].alt_action;
+            bool new_is_buy = (new_action_to_compare == "Buy");
+
+            if(live_exists)
+            {
+               if(live_is_buy != new_is_buy)
+               {
+                  // Directions CONFLICT: close and reset with newest data
+                  CloseExistingPositions(temp_signals[t].symbol);
+                  pending_signals[existing_idx].symbol = temp_signals[t].symbol;
+                  pending_signals[existing_idx].current_action = temp_signals[t].s1_action;
+                  pending_signals[existing_idx].current_entry = temp_signals[t].s1_entry;
+                  pending_signals[existing_idx].current_target = temp_signals[t].s1_target;
+                  pending_signals[existing_idx].current_stop_loss = temp_signals[t].alt_entry;
+                  pending_signals[existing_idx].alt_action = temp_signals[t].alt_action;
+                  pending_signals[existing_idx].alt_entry = temp_signals[t].alt_entry;
+                  pending_signals[existing_idx].alt_target = temp_signals[t].alt_target;
+                  pending_signals[existing_idx].signal_time = TimeCurrent();
+                  pending_signals[existing_idx].scenario_one_active = true;
+                  pending_signals[existing_idx].scenario_switch_price = temp_signals[t].alt_entry;
+                  pending_signals[existing_idx].scenario_one_executed = false;
+                  pending_signals[existing_idx].alternative_executed = false;
+                  Print("New conflicting signal for " + temp_signals[t].symbol + ". Closing old trade and updating to new signal.");
+               }
+               else
+               {
+                  // Directions SAME: continuation - modify SL/TP only, do not reset flags
+                  double new_sl = 0.0;
+                  double new_tp = 0.0;
+                  if(existing.scenario_one_active)
+                  {
+                     pending_signals[existing_idx].current_target = temp_signals[t].s1_target;
+                     pending_signals[existing_idx].current_stop_loss = temp_signals[t].alt_entry; // primary uses alternative entry as SL
+                  }
+                  else
+                  {
+                     pending_signals[existing_idx].current_target = temp_signals[t].alt_target;
+                     // Alternative SL mirrors distance from alt entry to alt target
+                     if(temp_signals[t].alt_action == "Buy")
+                        pending_signals[existing_idx].current_stop_loss = temp_signals[t].alt_entry - MathAbs(temp_signals[t].alt_target - temp_signals[t].alt_entry);
+                     else
+                        pending_signals[existing_idx].current_stop_loss = temp_signals[t].alt_entry + MathAbs(temp_signals[t].alt_target - temp_signals[t].alt_entry);
+                  }
+                  new_sl = pending_signals[existing_idx].current_stop_loss;
+                  new_tp = pending_signals[existing_idx].current_target;
+                  // Try to modify the live position
+                  if(trade.PositionModify(existing.symbol, new_sl, new_tp))
+                  {
+                     Print("Continuation update for " + existing.symbol + ": Modified live position SL/TP to new report levels.");
+                     // Align lifecycle flags with reality of a live trade in the active scenario
+                     if(existing.scenario_one_active)
+                     {
+                        pending_signals[existing_idx].scenario_one_executed = true;
+                     }
+                     else
+                     {
+                        pending_signals[existing_idx].alternative_executed = true;
+                        // Lifecycle complete for alternative; mark traded and remove
+                        AddTradedToday(existing.symbol);
+                        RemovePendingSignal(existing_idx);
+                        // Adjust loop variables as we removed an entry
+                        existing_idx = -1;
+                     }
+                  }
+                  else
+                  {
+                     DebugPrint("Continuation update failed to modify position: " + trade.ResultComment());
+                  }
+               }
+            }
+            else
+            {
+               // No live position: overwrite and reset flags
+               pending_signals[existing_idx].symbol = temp_signals[t].symbol;
+               pending_signals[existing_idx].current_action = temp_signals[t].s1_action;
+               pending_signals[existing_idx].current_entry = temp_signals[t].s1_entry;
+               pending_signals[existing_idx].current_target = temp_signals[t].s1_target;
+               pending_signals[existing_idx].current_stop_loss = temp_signals[t].alt_entry;
+               pending_signals[existing_idx].alt_action = temp_signals[t].alt_action;
+               pending_signals[existing_idx].alt_entry = temp_signals[t].alt_entry;
+               pending_signals[existing_idx].alt_target = temp_signals[t].alt_target;
+               pending_signals[existing_idx].signal_time = TimeCurrent();
+               pending_signals[existing_idx].scenario_one_active = true;
+               pending_signals[existing_idx].scenario_switch_price = temp_signals[t].alt_entry;
+               pending_signals[existing_idx].scenario_one_executed = false;
+               pending_signals[existing_idx].alternative_executed = false;
+               Print("No live position for " + temp_signals[t].symbol + ". Updating to latest signal and resetting state.");
+            }
+         }
+         else
+         {
+            // New entry
+            ArrayResize(pending_signals, pending_count + 1);
+            pending_signals[pending_count].symbol = temp_signals[t].symbol;
+            pending_signals[pending_count].current_action = temp_signals[t].s1_action;
+            pending_signals[pending_count].current_entry = temp_signals[t].s1_entry;
+            pending_signals[pending_count].current_target = temp_signals[t].s1_target;
+            pending_signals[pending_count].current_stop_loss = temp_signals[t].alt_entry; // Alternative entry as stop loss
+            pending_signals[pending_count].alt_action = temp_signals[t].alt_action;
+            pending_signals[pending_count].alt_entry = temp_signals[t].alt_entry;
+            pending_signals[pending_count].alt_target = temp_signals[t].alt_target;
+            pending_signals[pending_count].signal_time = TimeCurrent();
+            pending_signals[pending_count].scenario_one_active = true;
+            pending_signals[pending_count].scenario_switch_price = temp_signals[t].alt_entry; // Switch trigger
+            pending_signals[pending_count].scenario_one_executed = false;
+            pending_signals[pending_count].alternative_executed = false;
+            Print("*** PENDING SIGNAL CREATED: " + pending_signals[pending_count].symbol + " ***");
+            Print("Primary: " + pending_signals[pending_count].current_action + " at " +
+                  DoubleToString(pending_signals[pending_count].current_entry, _Digits) +
+                  " | Target: " + DoubleToString(pending_signals[pending_count].current_target, _Digits));
+            Print("Alternative: " + pending_signals[pending_count].alt_action + " at " +
+                  DoubleToString(pending_signals[pending_count].alt_entry, _Digits) +
+                  " | Target: " + DoubleToString(pending_signals[pending_count].alt_target, _Digits));
+            Print("Switch Price: " + DoubleToString(pending_signals[pending_count].scenario_switch_price, _Digits));
+            pending_count++;
+         }
       }
    }
    Print("=== SIGNAL PROCESSING COMPLETE: " + IntegerToString(pending_count) + " signals pending ===");
